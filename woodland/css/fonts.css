@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Qanelas Regular';
+    src: url('../fonts/Qanelas-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Qanelas Medium';
+    src: url('../fonts/Qanelas-Medium.woff');
+}
+
+@font-face {
+    font-family: 'Qanelas SemiBold';
+    src: url('../fonts/Qanelas-SemiBold.woff');
+}
+
+@font-face {
+    font-family: 'Qanelas Bold';
+    src: url('../fonts/Qanelas-Bold.woff');
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('../fonts/Inter-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Inter SemiBold';
+    src: url('../fonts/Inter-SemiBold.woff');
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../fonts/Inter-Bold.woff');
+}

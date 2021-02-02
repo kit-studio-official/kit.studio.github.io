@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>
+		index.html
+	</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css">
+
+
+	<!-- mobile -->
+	<meta name="viewport" content="width=device-width">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-rim-auto-match" content="none">
+
+	<style>
+		.hide {
+			display: none;
+		}
+
+		.red_circle_out {
+			z-index: 110;
+			opacity: 0;
+			pointer-events: none;
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			left: 0;
+			top: 0;
+			background-color: #EF3841;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+
+		.red_circle_out svg{
+			width: 50%;
+			height: auto;
+			display: block;
+			
+		}
+
+		.red_circle_out.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		@media only screen and (max-width:1279px) {
+			.red_circle_out {
+				display: none;
+			}
+		}
+	</style>
+</head>
+
+<body>			
+	<div class="red_circle_out">
+		<svg xmlns="http://www.w3.org/2000/svg" width="167" height="28" fill="#fff" xmlns:v="https://vecta.io/nano" viewBox="0 0 167 28">
+			<path d="M38.426 20.54c-1-.96-1.47-2.232-1.47-3.786v-10.2c0-1.582.48-2.825 1.47-3.786s2.317-1.44 3.927-1.44 2.967.48 3.956 1.44S47.834 5 47.834 6.555v1.13c0 .085-.056.17-.085.254-.085.085-.14.085-.254.085H44.84c-.085 0-.17-.056-.254-.085-.085-.085-.085-.14-.085-.254V6.527c0-.706-.226-1.27-.622-1.667-.395-.424-.904-.65-1.526-.65a1.96 1.96 0 0 0-1.526.65c-.396.424-.565.96-.565 1.667v10.228c0 .706.17 1.27.565 1.667a1.96 1.96 0 0 0 1.526.65 1.96 1.96 0 0 0 1.526-.65c.396-.424.622-.96.622-1.667v-2.74c0-.085-.056-.14-.14-.14H42.61c-.085 0-.17-.056-.254-.085-.085-.085-.085-.14-.085-.254v-2.1c0-.085.057-.17.085-.254.085-.085.14-.085.254-.085h4.888c.085 0 .17.056.254.085.085.085.085.14.085.254v5.312c0 1.582-.537 2.825-1.526 3.786s-2.317 1.44-3.956 1.44c-1.6 0-2.9-.48-3.927-1.44zm19.75.933l-2.43-8.222c-.056-.085-.085-.14-.14-.14H54.08c-.085 0-.14.056-.14.14v8.194c0 .085-.056.17-.085.254-.085.085-.14.085-.254.085h-2.656c-.085 0-.17-.057-.254-.085-.085-.085-.085-.14-.085-.254V2.006c0-.085.056-.17.085-.254.085-.085.14-.085.254-.085h5.397c1 0 1.92.254 2.712.735s1.384 1.187 1.837 2.1c.424.876.65 1.92.65 3.05 0 1.187-.226 2.232-.706 3.08-.48.876-1.102 1.526-1.92 1.95-.085 0-.085.085-.085.17l2.826 8.674c0 .057.056.085.056.14 0 .17-.085.254-.3.254h-2.74c-.3-.056-.396-.17-.48-.34zm-4.238-16.84v5.707c0 .085.056.14.14.14h1.752c.706 0 1.27-.254 1.695-.8s.65-1.27.65-2.176-.226-1.667-.65-2.232-1-.82-1.695-.82h-1.75c-.085 0-.14.085-.14.17zM65.2 20.37c-1-1.045-1.47-2.486-1.47-4.238V1.92c0-.085.056-.17.085-.254.085-.085.14-.085.254-.085h2.656c.085 0 .17.056.254.085.085.085.085.14.085.254v14.55c0 .8.17 1.384.565 1.865a1.86 1.86 0 0 0 1.526.735 1.86 1.86 0 0 0 1.526-.735c.395-.48.565-1.102.565-1.865V1.92c0-.085.056-.17.085-.254.085-.085.14-.085.254-.085h2.656c.085 0 .17.056.254.085.085.085.085.14.085.254v14.212c0 1.752-.48 3.136-1.47 4.238-1 1.045-2.317 1.6-3.927 1.6-1.667 0-3.023-.5-3.984-1.6zm21.53-.027c-1.045.96-2.345 1.44-4.012 1.44H77.67c-.085 0-.17-.057-.254-.085-.085-.085-.085-.14-.085-.254V2.006c0-.085.056-.17.085-.254.085-.085.14-.085.254-.085h4.52c1.837 0 3.278.48 4.266 1.384 1.045.904 1.582 2.26 1.582 4.012 0 1.95-.706 3.4-2.1 4.238-.085.056-.14.14-.056.17.735.48 1.356 1.13 1.752 1.92.424.8.65 1.752.65 2.882-.028 1.695-.5 3.108-1.554 4.07zm-6.046-15.7V10c0 .085.056.14.14.14h1.47c.8 0 1.384-.254 1.837-.735.424-.48.65-1.187.65-2.034 0-.904-.226-1.6-.65-2.147-.424-.48-1.045-.735-1.837-.735h-1.47c-.113-.028-.14.057-.14.14zm3.617 13.393c.424-.537.65-1.3.65-2.26 0-1-.226-1.78-.65-2.345s-1.045-.82-1.837-.82h-1.667c-.085 0-.14.056-.14.14v5.933c0 .085.056.14.14.14h1.667c.8.028 1.385-.226 1.837-.8zm14.805 3.476l-3.193-9.098c0-.056-.056-.085-.14-.085h-2.825c-.085 0-.14.056-.14.14v9.013c0 .17-.085.3-.3.3h-.96c-.17 0-.3-.085-.3-.3V1.92c0-.17.085-.3.3-.3h4.492c1.356 0 2.43.48 3.277 1.47.82 1 1.215 2.317 1.215 3.927 0 1.27-.255 2.402-.82 3.278-.565.904-1.3 1.526-2.26 1.836-.085 0-.085.085-.085.14l3.278 9.154.056.14c0 .14-.085.226-.254.226h-.96c-.198-.028-.3-.113-.367-.283zM92.843 3.08v7.855c0 .085.056.14.14.14h2.9c.96 0 1.695-.34 2.26-1.102.565-.735.876-1.695.876-2.9s-.3-2.232-.876-2.967-1.356-1.102-2.26-1.102h-2.9c-.085-.056-.14 0-.14.085zm12.15 17.433c-.876-1-1.3-2.317-1.3-3.956V1.92a.28.28 0 0 1 .311-.311h.96a.28.28 0 0 1 .311.311v14.805c0 1.187.3 2.147.875 2.825a2.87 2.87 0 0 0 2.317 1.102c.96 0 1.752-.34 2.345-1.102.622-.735.905-1.667.905-2.825V1.92c0-.17.084-.3.3-.3h.96c.17 0 .3.085.3.3v14.636c0 1.6-.424 2.967-1.3 3.927-.876 1-2.062 1.47-3.447 1.47-1.554.028-2.684-.452-3.56-1.44zM125.364 1.6h.904c.17 0 .3.085.3.3v19.552c0 .17-.084.3-.3.3h-1.13c-.17 0-.254-.085-.3-.226l-6.132-16.133c0-.057-.056-.085-.084-.085-.057 0-.057.057-.057.085l.057 16.02c0 .17-.085.3-.3.3h-.96a.28.28 0 0 1-.311-.311V1.893a.28.28 0 0 1 .311-.311h1.074c.17 0 .254.085.3.226l6.13 16.02c0 .057.056.085.085.085.056 0 .056-.056.056-.085V1.893c.085-.17.17-.283.367-.283zm14.07 0h.904c.17 0 .3.085.3.3v19.552a.28.28 0 0 1-.311.311h-1.13c-.17 0-.254-.085-.3-.226l-6.16-16.133c0-.057-.057-.085-.085-.085-.056 0-.056.057-.056.085l.056 16.02c0 .17-.085.3-.3.3h-.96c-.17 0-.3-.085-.3-.3V1.893a.28.28 0 0 1 .311-.311h1.1c.17 0 .255.085.3.226l6.13 16.02c0 .057.057.085.085.085.057 0 .057-.056.057-.085V1.893c.056-.17.14-.283.367-.283zm14.183 1.328h-6.8c-.085 0-.14.057-.14.14v7.798c0 .085.056.14.14.14h4.35c.17 0 .3.085.3.3v.8c0 .17-.085.3-.3.3h-4.35c-.085 0-.14.056-.14.14v7.798c0 .085.056.14.14.14h6.8c.17 0 .3.085.3.3v.8a.28.28 0 0 1-.311.311h-8.137a.28.28 0 0 1-.311-.311V2.063a.28.28 0 0 1 .311-.311h8.137c.17 0 .3.085.3.3v.8c-.028 0-.14.085-.3.085zm11.612 18.564l-3.193-9.098c0-.056-.056-.085-.14-.085h-2.825c-.085 0-.142.056-.142.14v9.013c0 .17-.084.3-.3.3h-.96c-.17 0-.3-.085-.3-.3V1.92a.28.28 0 0 1 .311-.311h4.436c1.356 0 2.43.48 3.277 1.47.82 1 1.215 2.317 1.215 3.927 0 1.27-.254 2.402-.82 3.278-.565.904-1.3 1.526-2.26 1.836-.085 0-.085.085-.085.14l3.277 9.154.057.14c0 .14-.085.226-.254.226h-.96c-.14-.028-.283-.113-.3-.283zM158.987 3.08v7.855c0 .085.056.14.14.14h2.9c.96 0 1.696-.34 2.26-1.102.565-.735.876-1.695.876-2.9s-.3-2.232-.876-2.967-1.357-1.102-2.26-1.102h-2.9c-.14-.056-.14 0-.14.085zM22.406 21.473c0-.254.226-.48.48-.48s.48.226.48.48l.17 6.047c0 .17-.085.34-.254.424-.085.056-.14.056-.226.056s-.226-.056-.3-.085L15.37 21.87c-.226-.17-.226-.48-.056-.65.17-.226.48-.226.65-.057M28.8 7.77V4.944c0-2.57-6.414-4.662-14.297-4.662S.198 2.373.198 4.944v2.882L28.8 7.77z"/><path d="M.226 7.996c-.057 0-.14-.057-.17-.057S0 7.855 0 7.77V4.888C0 2.147 6.357 0 14.523 0c8.137 0 14.494 2.147 14.494 4.888v2.825c0 .14-.085.226-.226.226L.226 7.996zM14.523.452C6.894.452.452 2.486.452 4.888v2.656h28.085V4.916c.056-2.4-6.414-4.464-14.014-4.464zM.226 18.676c0 3.193 6.414 3.4 14.297 3.4s14.297-.254 14.297-3.4V17.32H.226v1.356z"/><path d="M14.494 22.293C6.3 22.293 0 22.038 0 18.676V17.32c0-.14.085-.226.226-.226h28.537c.14 0 .226.085.226.226v1.356c.028 3.362-6.3 3.617-14.494 3.617zM.424 17.546v1.13c0 2.967 6.357 3.193 14.07 3.193s14.07-.254 14.07-3.193v-1.13H.424zm.706-3.87h26.785c.622 0 1.13-.48 1.13-1.102s-.5-1.102-1.13-1.102H1.13c-.622 0-1.13.48-1.13 1.102a1.15 1.15 0 0 0 1.13 1.102z"/>
+		</svg>
+	</div>	
+	
+	<header>
+		<a class="logo" href="#main" data-menuachor="main">	
+			<div class="white_logo">
+				<img src="images/logo.svg" alt="">
+			</div>	
+			<div class="black_logo">
+				<img src="images/logo_black.svg" alt="">
+			</div>
+		</a>
+		<div class="menu_container_mobile">
+			<nav class="menu menu_header">
+				<li data-menuachor="problem">
+					<a href="#problem">
+						The Problem
+					</a>
+				</li>
+				<li data-menuachor="solution">
+					<a href="#solution">
+						The Solution
+					</a>
+				</li>
+				<li data-menuachor="pricing">
+					<a href="#pricing">
+						Pricing
+					</a>
+				</li>
+				<li data-menuachor="aboutUs">
+					<a href="#aboutUs">
+						About Us
+					</a>
+				</li>
+				<li data-menuachor="faq">
+					<a href="#faq">
+						FAQ
+					</a>
+				</li>
+				<div class="button_start">
+					Get Started
+				</div>
+			</nav>
+		</div>
+		<div class="menu_open menu_open_click">
+			<div></div>
+			<div></div>
+		</div>
+	</header>
+	<div class="hidden_list_block">
+		<ul class="hidden_list"></ul>
+	</div>
+	<div class="line_scrollbar">
+		<div class="line_grey">
+			<div class="line_current_slide"></div>
+		</div>
+	</div>
+	<div id="pagepiling">
+		<div class="section main_page" data-anchor="page1" id="main">
+			<div class="line_scrollbar">
+			</div>
+			<div class="red_circle"></div>
+			<script>
+				var activeBlock = window.location.hash;
+				if (activeBlock != '#main' && activeBlock != '') {
+					document.querySelector('.red_circle_out').classList.add('active');
+					document.querySelector('.red_circle').classList.add('hide');
+				}
+			</script>	
+			<div class="section_container">
+				<div class="left_content_container">
+					<div class="text_container">
+						<h1 class="header_main_block">
+							Make <br> Lifetime <br>
+							<span id="typingString" class="typingString">
+								Memories
+							</span>
+						</h1>
+					</div>
+					<div class="right_content_container">
+						<p>Watch the intro video</p>
+						<div class="video_block">
+							<div class="play_video">
+								<div class="play_video_button">
+									<svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.857 6.24296L0.421374 0.0385672C0.334043 -0.0134099 0.226912 -0.0128129 0.140113 0.0401347C0.0533141 0.0930822 -5.40157e-05 0.19039 4.10267e-08 0.295606V12.7044C-5.40157e-05 12.8096 0.0533141 12.9069 0.140113 12.9599C0.226912 13.0128 0.334043 13.0134 0.421374 12.9614L10.857 6.75704C10.9454 6.70458 11 6.6064 11 6.5C11 6.3936 10.9454 6.29542 10.857 6.24296Z" fill="white"/>
+									</svg>
+								</div>
+								<div class="stop_video_button">	
+									<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M50 99.5C22.6619 99.5 0.500004 77.3381 0.500005 50C0.500007 22.6619 22.6619 0.499997 50 0.499998C77.3381 0.499999 99.5 22.6619 99.5 50C99.5 77.3381 77.3381 99.5 50 99.5Z" stroke="white"/>
+										<line x1="55" y1="44" x2="55" y2="57" stroke="white" stroke-width="2"/>
+										<line x1="47" y1="44" x2="47" y2="57" stroke="white" stroke-width="2"/>
+									</svg>
+								</div>
+							</div>
+							<video src="images/video.mp4" poster="images/poster.jpg"></video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section white_section" data-anchor="page2" id="problem" data-menuPointActive ="problem">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Problem</div>
+					</div>
+					<h2 class ="header_title">Fans Hate Long Lines and Waiting</h2>
+					<div class="right_section">
+						<img src="images/image_1.png" alt="">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_menu_right white_section" id="solution" data-anchor="solution" data-menuPointActive ="solution">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Solution</div>
+					</div>
+					<h2 class = "header_title">Get Fans Ordering in 15 seconds or Less</h2>
+					<div class="right_section">
+						<img src="images/image_2.png" alt="">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_menu_right white_section" id="page4" data-anchor="page4" data-menuPointActive ="solution">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Solution</div>
+					</div>
+					<h2 class = "header_title">Easily Manage Orders from the Kitchen</h2>
+					<div class="right_section">
+						<img src="images/image_3.jpg" alt="">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_menu_right white_section" id="page5" data-anchor="page5" data-menuPointActive ="solution">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Solution</div>
+					</div>
+					<h2 class = "header_title">Get Live Customer Support</h2>
+					<div class="right_section">
+						<img src="images/image_4.png" alt="">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_menu_right white_section" id="page6" data-anchor="page6" data-menuPointActive ="solution">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Solution</div>
+					</div>
+					<h2 class = "header_title">
+						Easily Manage Orders from the Kitchen
+					</h2>
+					<div class="right_section">
+						<img src="images/image_5.png" alt="">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_menu_right white_section footer_link" id="page7" data-anchor="page7" data-menuPointActive ="solution">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Solution</div>
+					</div>
+					<h2 class = "header_title">
+						Facebook grid or else
+					</h2>
+					<div class="right_section">
+						<img src="images/image_6.png" alt="">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section_menu_right white_section" id="page8" data-anchor="page8" data-menuPointActive ="solution">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Solution</div>
+					</div>
+					<h2 class = "header_title">
+						Easily Manage Orders from the Kitchen
+					</h2>
+					<div class="right_section">
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section footer_link black_section footer_link" data-anchor="pricing" id="pricing" data-menuPointActive ="pricing">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">The Pricing</div>
+					</div>
+					<h2 class = "header_title">
+						No Setup Fees. <br> No Hidden Costs.
+					</h2>
+					<div class="right_section">
+						<div id="slider_block" class="slider_block">
+							<div class="price_block_counter">
+								<div class="RIO_price">
+									<h3>$<span class="price_total">3,995</span> </h3>
+									<p>R.O.I. per Game *</p>
+								</div>
+								<div class="price_right">
+									<h3>$<span class="price_total">3,995</span> </h3>
+									<p>Feer per Game</p>
+								</div>
+							</div>
+							<div id= "slider" class="slider"></div>
+							<div class="circle_block">
+								<div class="red_circle_slider red_circle_slider_active " data-priceSlider="0">
+									<div class="circle "></div>
+									<div class="bottomText">
+										<p>10<span>games</span></p>
+									</div>
+								</div>
+								<div class="red_circle_slider " data-priceSlider="1000">
+									<div class="circle"></div>
+									<div class="bottomText">
+										<p>20<span>games</span></p>
+									</div>
+								</div>
+								<div class="red_circle_slider" data-priceSlider="2000">
+									<div class="circle"></div>
+									<div class="bottomText">
+										<p>30<span>games</span></p>
+									</div>
+								</div>
+								<div class="red_circle_slider" data-priceSlider="3000">
+									<div class="circle"></div>
+									<div class="bottomText">
+										<p>50<span>games</span></p>
+									</div>
+								</div>
+								<div class="red_circle_slider" data-priceSlider="4000">
+									<div class="circle"></div>
+									<div class="bottomText">
+										<p>100<span>games</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="buttons_block">
+								<div class="button_start button_choose active_choose_button" data-priceButton="3995">
+									< 20K seats
+								</div>
+								<div class="button_start button_choose" data-priceButton="5995">
+									20-40K seats
+								</div>
+								<div class="button_start button_choose" data-priceButton="6995">
+									40K+ seats
+								</div>
+							</div>
+							<div class="desktop_attention">
+								<p>
+									<span>*</span>Assuming order size of $22.50 based on previous operations
+									Assuming $10 per hour per runner for 5 hours per game
+								</p>
+							</div>
+						</div>
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+					<div class="button_start">
+						Get Started
+					</div>
+					<div class="mobile">
+						<p>
+							<span>*</span>Assuming order size of $22.50 based on previous operations <br>
+							Assuming $10 per hour per runner for 5 hours per game
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section white_section footer_link aboutUs" id="aboutUs" data-anchor="aboutUs" data-menuPointActive ="aboutUs">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="red_bubble_header">About Us</div>
+					</div>
+					<h2 class = "header_title">
+						Easily Manage Orders from the Kitchen
+					</h2>
+					<div class="video_block video_block_about_us mobile">
+						<div class="play_video">
+							<div class="play_video_button">
+								<svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.857 6.24296L0.421374 0.0385672C0.334043 -0.0134099 0.226912 -0.0128129 0.140113 0.0401347C0.0533141 0.0930822 -5.40157e-05 0.19039 4.10267e-08 0.295606V12.7044C-5.40157e-05 12.8096 0.0533141 12.9069 0.140113 12.9599C0.226912 13.0128 0.334043 13.0134 0.421374 12.9614L10.857 6.75704C10.9454 6.70458 11 6.6064 11 6.5C11 6.3936 10.9454 6.29542 10.857 6.24296Z" fill="white"/>
+								</svg>
+							</div>
+							<div class="stop_video_button">	
+								<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M50 99.5C22.6619 99.5 0.500004 77.3381 0.500005 50C0.500007 22.6619 22.6619 0.499997 50 0.499998C77.3381 0.499999 99.5 22.6619 99.5 50C99.5 77.3381 77.3381 99.5 50 99.5Z" stroke="white"/>
+									<line x1="55" y1="44" x2="55" y2="57" stroke="white" stroke-width="2"/>
+									<line x1="47" y1="44" x2="47" y2="57" stroke="white" stroke-width="2"/>
+								</svg>
+							</div>
+						</div>
+						<video src="images/video.mp4" poster="images/poster.jpg"></video>
+					</div>
+					<p class="subtitle_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+					<div class="separator"></div>
+				</div>
+			</div>
+			<div class="video_block video_block_about_us desktop">
+				<div class="play_video">
+					<div class="play_video_button">
+						<svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.857 6.24296L0.421374 0.0385672C0.334043 -0.0134099 0.226912 -0.0128129 0.140113 0.0401347C0.0533141 0.0930822 -5.40157e-05 0.19039 4.10267e-08 0.295606V12.7044C-5.40157e-05 12.8096 0.0533141 12.9069 0.140113 12.9599C0.226912 13.0128 0.334043 13.0134 0.421374 12.9614L10.857 6.75704C10.9454 6.70458 11 6.6064 11 6.5C11 6.3936 10.9454 6.29542 10.857 6.24296Z" fill="white"/>
+						</svg>
+					</div>
+					<div class="stop_video_button">	
+						<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M50 99.5C22.6619 99.5 0.500004 77.3381 0.500005 50C0.500007 22.6619 22.6619 0.499997 50 0.499998C77.3381 0.499999 99.5 22.6619 99.5 50C99.5 77.3381 77.3381 99.5 50 99.5Z" stroke="white"/>
+							<line x1="55" y1="44" x2="55" y2="57" stroke="white" stroke-width="2"/>
+							<line x1="47" y1="44" x2="47" y2="57" stroke="white" stroke-width="2"/>
+						</svg>
+					</div>
+				</div>
+				<video src="images/video.mp4" poster="images/poster.jpg"></video>
+			</div>
+		</div>
+		<div class="section white_section footer_link faq" id="faq" data-anchor="faq" data-menuPointActive ="faq">
+			<div class="section_container">
+				<div class="left_section">
+					<div class="text_container">
+						<div class="search_container">
+							<div class="red_bubble_header">FAQ
+							</div>
+							<div class="search_block_input">
+								<label for="search">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 11H11.7L11.4 10.7C12.4 9.6 13 8.1 13 6.5C13 2.9 10.1 0 6.5 0C2.9 0 0 2.9 0 6.5C0 10.1 2.9 13 6.5 13C8.1 13 9.6 12.4 10.7 11.4L11 11.7V12.5L16 17.5L17.5 16L12.5 11ZM6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5C11 9 9 11 6.5 11Z" fill="#19191B"/>
+									</svg>
+								</label>
+								<input type="text" class="search" id="search" placeholder="Search">	
+							</div>
+						</div>
+						<div class="ToggleSectionBlock">
+							<div class="ToggleButton" data-sectionName="technology">Technology</div>
+							<div class="ToggleButton" data-sectionName="operation">Operation</div>
+							<div class="ToggleButton" data-sectionName="marketing">Marketing</div>
+						</div>
+					</div>
+					<h2 id="sectionNameHeader" class="header_title">
+						Popular question
+					</h2>
+					<ul class="question_block">
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="technology"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Does this Grub Runner operation work for me?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Why it worth hello kitty to buy?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Does this Grub ow, what are you doing here? Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Why it worth hello kitty to buy?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="operation"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Does this Grub Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Does this Grub ow, what are you doing here? Runner work for me?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">How it works for consumer?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Why it worth to buy?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+						<li class="active_question" data-sectionName="marketing"><a href="answer.html">Can I get back my money if I don’t like a product?</a></li>
+					</ul>
+					<div class="pagination_block">
+					</div>
+					<div class="separator"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="menu menu_right" id="menu">
+		<li data-menuachor="solution" class="active_point"><a href="#solution"> <span></span></a></li>
+		<li data-menuachor="page4"><a href="#page4"><span></span></a></li>
+		<li data-menuachor="page5"><a href="#page5"><span></span></a></li>
+		<li data-menuachor="page6"><a href="#page6"><span></span></a></li>
+		<li data-menuachor="page7"><a href="#page7"><span></span></a></li>
+		<li data-menuachor="page8"><a href="#page8"><span></span></a></li>
+	</ul>
+	<footer>
+		<div class="content_footer">
+			<div class="scroll">
+				<div class="scroll_down">Scroll down</div>
+				<div class="scroll_up">Back to Start</div>
+			</div>
+			<div class="hidden_links">
+				<a href="">Support</a>
+				<a href="">Privacy Policy</a>
+				<a href="">Terms and Conditions</a>
+			</div>
+			<a href="" class="linkedIn">
+				<span>Follow Us</span>
+				<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12.0389 0H0.960303C0.430046 0 0 0.417146 0 0.93126V12.069C0 12.5829 0.430046 13 0.960303 13H12.0389C12.57 13 13 12.5826 13 12.069V0.93126C13 0.416884 12.5697 0 12.0389 0ZM3.94037 10.8826H1.97689V5.01255H3.94037V10.8826ZM2.95877 4.21066H2.94561C2.287 4.21066 1.8609 3.7598 1.8609 3.19655C1.8609 2.62075 2.30015 2.18244 2.97165 2.18244C3.64342 2.18244 4.05663 2.62075 4.06978 3.19655C4.06978 3.7598 3.64316 4.21066 2.95877 4.21066ZM11.0207 10.8826H9.05726V7.74151C9.05726 6.95269 8.77319 6.41427 8.06276 6.41427C7.5204 6.41427 7.19741 6.77731 7.05511 7.12807C7.0033 7.25327 6.99067 7.42838 6.99067 7.60402V10.8824H5.02719C5.02719 10.8824 5.05297 5.56247 5.02719 5.01228H6.99067V5.84318C7.25159 5.44328 7.7182 4.87376 8.76057 4.87376C10.0523 4.87376 11.021 5.71302 11.021 7.51621V10.8826H11.0207Z"/>
+				</svg>
+				<span class="linkedIn_in">Linkedin</span>
+			</a>
+		</div>
+	</footer>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.pagepiling.js"></script>
+	<script src="js/typeIt.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.js"></script>
+	<script src="js/script.js"></script> 
+
+</body>
+</html>
