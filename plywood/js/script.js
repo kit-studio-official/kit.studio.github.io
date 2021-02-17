@@ -62,6 +62,9 @@ $('.sort-dropdown__list li').on('click', function () {
   $(this).closest('.sort-dropdown').find('input').val(getSortListText);
 
   $(this).closest('.sort-dropdown').blur();
+  $(this).closest('.sort-dropdown').find('.sort-dropdown__value').blur();
+  $(this).closest('.sort-dropdown__list').blur();
+  $(this).blur();
 });
 
 
