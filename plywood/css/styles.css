@@ -204,18 +204,6 @@ main {
   transition: 0.4s;
 }
 
-.header__nav-block a:hover strong {
-  color: #008001;
-}
-
-.header__nav-block a:hover .header-nav__img svg path {
-  fill: #008001;
-}
-
-.header__phone a:hover .header-nav__img svg path {
-  stroke: #008001;
-}
-
 .header__basket-number {
   position: absolute;
   display: flex;
@@ -379,20 +367,16 @@ main {
   color: #DCDCDC;
 }
 
-.sort-dropdown__list li:hover {
-  color: #008001;
-}
-
-.sort-dropdown:hover .sort-dropdown__value {
+.sort-dropdown.active .sort-dropdown__value {
   border-bottom-color: transparent;
 }
 
-.sort-dropdown:hover .sort-dropdown__value span {
+.sort-dropdown.active .sort-dropdown__value span {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.sort-dropdown:hover .sort-dropdown__list {
+.sort-dropdown.active .sort-dropdown__list {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1;
@@ -420,10 +404,6 @@ main {
   width: 20px;
   height: 12px;
   margin-right: 9px;
-}
-
-.sort-block__right-block a:hover {
-  color: #008001;
 }
 
 .price-section__main-block {
@@ -570,11 +550,6 @@ main {
   transition: 0.4s;
 }
 
-.price-counter button:hover {
-  color: #008001;
-}
-
-
 .price-counter__description {
   margin-top: 3px;
 
@@ -668,16 +643,6 @@ main {
   transition: 0.4s;
 }
 
-.price-main-box__btn:hover,
-.price-main-box__btn.active {
-  background: #008001;
-}
-
-.price-main-box__btn:hover p,
-.price-main-box__btn.active p {
-  color: #ffffff;
-}
-
 .price-main-box__btn.active p:before {
   position: static;
   opacity: 1;
@@ -727,14 +692,6 @@ main {
   margin-left: 18px;
 }
 
-.price-section__link:hover strong {
-  color: #008001;
-}
-
-.price-section__link:hover path {
-  fill: #008001;
-}
-
 /* basket page*/
 
 .basket {
@@ -762,16 +719,6 @@ main {
 .basket__remove-product svg {
   max-width: 100%;
   max-height: 100%;
-}
-
-.basket__remove-product:hover img,
-.basket__remove-product:hover svg {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.basket__remove-product:hover path {
-  fill: #008001;
 }
 
 .basket__sum-block {
@@ -816,11 +763,6 @@ main {
   font-size: 16px;
   line-height: 120%;
   color: #fff;
-}
-
-.basket__sum-btn:hover {
-  background-color: transparent;
-  color: #008001;
 }
 
 .basket__sum:after {
@@ -896,11 +838,6 @@ main {
   background-color: #008001;
   color: #ffffff;
   pointer-events: none;
-}
-
-.ordering__tab:hover {
-  background-color: #008001;
-  color: #ffffff;
 }
 
 .ordering__items {
@@ -1027,13 +964,6 @@ main {
   text-overflow: ellipsis;
 }
 
-.ordering__form input:hover,
-.ordering__form input:focus,
-.ordering__form-file label:hover,
-.ordering__form-file label.hover {
-  border-color: #008001;
-}
-
 .ordering__form-description {
   margin-top: 26px;
 
@@ -1091,10 +1021,6 @@ main {
   width: 15px;
   height: 20px;
   margin-right: 9px;
-}
-
-.ordering-address-form__map-link:hover {
-  color: #008001;
 }
 
 .ordering__address-form input:last-child,
@@ -1177,11 +1103,6 @@ div.ordering-price__btn {
   transition: 0.4s;
 }
 
-.ordering-price__btn:hover {
-  background-color: transparent;
-  color: #008001;
-}
-
 .ordering__form-file lable.is-dragover {
   background-color: #e6ecef;
 }
@@ -1250,15 +1171,6 @@ div.ordering-price__btn {
 
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.modal__btn:hover svg path {
-  fill: #008001;
-}
-
-.modal__btn:hover img {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 .modal__header {
@@ -1333,10 +1245,6 @@ div.ordering-price__btn {
   text-decoration-color: transparent;
 }
 
-.modal__form-description:hover {
-  text-decoration-color: #008001;
-}
-
 .modal__back-to {
   display: flex;
   align-items: center;
@@ -1374,11 +1282,121 @@ div.ordering-price__btn {
   transition: 0.4s;
 }
 
-.modal__back-to:hover .modal-back-to__arrow {
-  -webkit-transform: translate3d(-10px, 0, 0);
-  transform: translate3d(-10px, 0, 0);
-}
 
-.modal__back-to:hover strong {
-  color: #008001;
+@media screen and (min-width: 1000px){
+  .header__nav-block a:hover strong {
+    color: #008001;
+  }
+
+  .header__nav-block a:hover .header-nav__img svg path {
+    fill: #008001;
+  }
+
+  .header__phone a:hover .header-nav__img svg path {
+    stroke: #008001;
+  }
+
+  .sort-dropdown__list li:hover {
+    color: #008001;
+  }
+
+  .sort-dropdown:hover .sort-dropdown__value {
+    border-bottom-color: transparent;
+  }
+
+  .sort-dropdown:hover .sort-dropdown__value span {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  .sort-dropdown:hover .sort-dropdown__list {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sort-block__right-block a:hover {
+    color: #008001;
+  }
+
+  .price-counter button:hover {
+    color: #008001;
+  }
+
+  .price-main-box__btn:hover,
+  .price-main-box__btn.active {
+    background: #008001;
+  }
+
+  .price-main-box__btn:hover p,
+  .price-main-box__btn.active p {
+    color: #ffffff;
+  }
+
+  .price-section__link:hover strong {
+    color: #008001;
+  }
+
+  .price-section__link:hover path {
+    fill: #008001;
+  }
+
+  .basket__remove-product:hover img,
+  .basket__remove-product:hover svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  .basket__remove-product:hover path {
+    fill: #008001;
+  }
+
+  .basket__sum-btn:hover {
+    background-color: transparent;
+    color: #008001;
+  }
+
+  .ordering__tab:hover {
+    background-color: #008001;
+    color: #ffffff;
+  }
+
+  .ordering__form input:hover,
+  .ordering__form input:focus,
+  .ordering__form-file label:hover,
+  .ordering__form-file label.hover {
+    border-color: #008001;
+  }
+
+  .ordering-address-form__map-link:hover {
+    color: #008001;
+  }
+
+  .ordering-price__btn:hover {
+    background-color: transparent;
+    color: #008001;
+  }
+
+  .modal__btn:hover svg path {
+    fill: #008001;
+  }
+
+  .modal__btn:hover img {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  .modal__form-description:hover {
+    text-decoration-color: #008001;
+  }
+
+  .modal__back-to:hover .modal-back-to__arrow {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  .modal__back-to:hover strong {
+    color: #008001;
+  }
 }

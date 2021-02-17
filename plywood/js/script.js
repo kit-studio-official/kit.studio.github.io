@@ -61,11 +61,17 @@ $('.sort-dropdown__list li').on('click', function () {
 
   $(this).closest('.sort-dropdown').find('input').val(getSortListText);
 
-  $(this).closest('.sort-dropdown').blur();
-  $(this).closest('.sort-dropdown').find('.sort-dropdown__value').blur();
-  $(this).closest('.sort-dropdown__list').blur();
-  $(this).blur();
+  if ($(window).width() < 750) {
+    $(this).closest('.sort-dropdown').removeClass('active');
+  }
 });
+
+if ($(window).width() < 750) {
+  $('.sort-dropdown__value').on('click', function () {
+    $('.sort-dropdown').removeClass('active');
+    $(this).closest('.sort-dropdown').toggleClass('active');
+  })
+}
 
 
 // product changes
