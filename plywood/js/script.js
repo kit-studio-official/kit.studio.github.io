@@ -60,6 +60,8 @@ $('.sort-dropdown__list li').on('click', function () {
   $(this).addClass('active');
 
   $(this).closest('.sort-dropdown').find('input').val(getSortListText);
+
+  $(this).closest('.sort-dropdown').blur();
 });
 
 
