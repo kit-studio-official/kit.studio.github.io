@@ -66,14 +66,14 @@ if ($(window).width() > 1250) {
 // mob menu open
 
 if ($(window).width() <= 1250) {
-  $(document).on('mouseup', function (e) {
+  $('.mob-menu-block').on('mouseup', function (e) {
     var div = $(".mob-menu");
     var header = $('.header');
     if (!div.is(e.target) && div.has(e.target).length === 0 &&!header.is(e.target) && header.has(e.target).length === 0) {
       blockBody();
-      div.closest('.mob-menu-block').removeClass('active');
-      $(this).find('.header__menu-open').removeClass('active');
-      $('.header').removeClass('light');
+      $(this).removeClass('active');
+      header.find('.header__menu-open').removeClass('active');
+      header.removeClass('light');
     }
   });
 
