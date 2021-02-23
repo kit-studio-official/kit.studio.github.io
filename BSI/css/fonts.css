@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Euclid";
+  src: url("../fonts/EuclidSquare-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url("../fonts/EuclidSquare-Medium.woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url("../fonts/EuclidSquare-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url("../fonts/EuclidSquare-SemiBold.woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url("../fonts/EuclidSquare-Light.woff");
+  font-weight: 300;
+}
+
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Medium.woff");
+  font-weight: 500;
+}
+
