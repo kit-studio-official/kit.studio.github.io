@@ -1,7 +1,7 @@
 // Маска телефона
 
 $('.phone-mask').inputmask('mask', {
-  'mask': '+7 999 999 9999',
+  'mask': '+999 9999 9999',
   showMaskOnHover: false
 });
 

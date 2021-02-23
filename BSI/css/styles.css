@@ -1504,6 +1504,7 @@ p.item-content__header-description {
   object-fit: cover;
 }
 
+.form-section__bg:before,
 .form-section__bg:after {
   content: '';
   display: block;
@@ -1514,7 +1515,15 @@ p.item-content__header-description {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(22, 28, 45, 0.2);
+  z-index: 1;
+}
+
+.form-section__bg:before {
+  background: linear-gradient(270deg, rgba(15, 102, 141, 0.33) 0%, #0F668D 180%);
+}
+
+.form-section__bg:after {
+  background: rgba(22, 28, 45, 0.2);
 }
 
 .form-section .container {
