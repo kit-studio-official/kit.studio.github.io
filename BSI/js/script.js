@@ -97,17 +97,22 @@ if ($(window).width() <= 1250) {
 
 // anchor scroll
 
-$(document).ready(function () {
-  $('.link-scroll').on("click", function (event) {
-    event.preventDefault();
+$('.link-scroll').on("click", function (event) {
+  event.preventDefault();
 
-    var id = $(this).attr('href');
-    var top = $(id).offset().top - 50;
+  if ($(this).closest('.mob-menu-block').length) {
+    blockBody();
+    $(this).closest('.mob-menu-block').removeClass('active');
+    $('.header__menu-open').removeClass('active');
+    $('.header').removeClass('light');
+  }
 
-    $('body,html').animate({
-      scrollTop: top
-    }, 1000);
-  });
+  var id = $(this).attr('href');
+  var top = $(id).offset().top - 50;
+
+  $('body,html').animate({
+    scrollTop: top
+  }, 1000);
 });
 
 
@@ -140,8 +145,11 @@ $(window).scroll(function () {
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+let vhr = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vhr', `${vhr}px`)
+
 window.addEventListener('resize', () => {
-  let vhr = window.innerHeight * 0.01;
+  vhr = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vhr', `${vhr}px`);
 });
 
@@ -318,12 +326,14 @@ $('.item-content__accordion-btn').on('click', function () {
 // calendar
 
 $('.date-input').datepicker({
+  inline: false,
+  autoClose: true,
+  showEvent: 'click',
   dateFormat: 'dd/mm/yyyy',
-  minDate: new Date(),
-  autoClose: true
-})
+  minDate: new Date()
+});
 
-$('.date-input').data('datepicker')
+$('.date-input').data('datepicker');
 
 
 // dropdown

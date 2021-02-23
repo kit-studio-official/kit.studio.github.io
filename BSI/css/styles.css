@@ -299,6 +299,7 @@ svg circle {
 .header__menu-btn-close {
   position: absolute;
   opacity: 0;
+  pointer-events: none;
 
   -webkit-transform: translate3d(15px, 0, 0);
   transform: translate3d(15px, 0, 0);
@@ -1053,6 +1054,8 @@ svg circle {
   left: 0;
 
   height: 27px;
+  width: auto;
+  max-width: 100%;
 }
 
 .experience-section__img-box img {
@@ -1647,7 +1650,8 @@ p.item-content__header-description {
 
 .form-input input,
 .form-input textarea,
-.form__dropdown-value {
+.form__dropdown-value,
+.date-input-box {
   width: 100%;
   min-height: 50px;
   height: 50px;
