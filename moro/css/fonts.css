@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'TT Norms';
+  src: url('../fonts/TTNorms-Medium.woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: url('../fonts/TTNorms-Regular.woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('../fonts/TTNormsPro-Medium.woff');
+  font-weight: 500;
+}
+
+
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('../fonts/TTTravels-Bold.woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('../fonts/TTTravels-Italic.woff');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('../fonts/TTTravels-Medium.woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('../fonts/TTTravels-Regular.woff');
+  font-weight: normal;
+}

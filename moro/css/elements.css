@@ -1,0 +1,453 @@
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.h1 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 85px;
+}
+
+.h2 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 76px;
+}
+
+.h3 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+.h4 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.h5 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.h6 {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.big-caps-text {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.small-caps-text {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.paragraph-big {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.paragraph-small {
+  font-family: 'TT Travels', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.button-small {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 14px 32px;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  background: none;
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button-big {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 16.5px 36px;
+  border: 1px solid #232323;
+  box-sizing: border-box;
+  background: none;
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button-small:hover,
+.button-big:hover {
+  border: 1px solid #F39090;
+  background-color: #F39090;
+  color: #fff;
+}
+
+.button-small:focus,
+.button-big:focus {
+  outline: 1px solid #FFFFFF;
+  outline-offset: -2px;
+}
+
+svg path,
+svg stroke,
+svg rect {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 1279px) {
+  .h3 {
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .h4 {
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .button-big {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    padding: 14px 32px;
+    border: 1px solid #232323;
+    box-sizing: border-box;
+    background: none;
+    font-family: 'TT Norms', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #232323;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+.checkbox-style {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.checkbox-style input[type="checkbox"]  {
+  display: none;
+}
+
+.checkbox-style label {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-style label > span {
+  display: block;
+  max-width: 175px;
+  font-family: 'TT Travels', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #232323;
+  user-select: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.checkbox-style label:hover > span {
+  color: #F39090;
+}
+
+.checkbox-style label > div {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #757575;
+  margin-right: 12px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.checkbox-style .check-icon {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 10px;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.checkbox-style .check-icon svg {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.checkbox-style input[type="checkbox"]:checked + label > div {
+  background: rgba(117, 117, 117, 0.2);
+  border: 1px solid rgba(117, 117, 117, 0.2);
+}
+
+.checkbox-style input[type="checkbox"]:checked + label .check-icon {
+  opacity: 1;
+}
+
+
+textarea::-webkit-input-placeholder { color: #757575; opacity: 1; }
+textarea::-moz-placeholder          { color: #757575; opacity: 1; }
+textarea:-moz-placeholder           { color: #757575; opacity: 1; }
+textarea:-ms-input-placeholder      { color: #757575; opacity: 1; }
+
+input::-webkit-input-placeholder { color: #757575; opacity: 1; }
+input::-moz-placeholder          { color: #757575; opacity: 1; }
+input:-moz-placeholder           { color: #757575; opacity: 1; }
+input:-ms-input-placeholder      { color: #757575; opacity: 1; }
+
+.scrollbar::-webkit-scrollbar { width: 3px; }
+.scrollbar::-webkit-scrollbar-track { background-color: #E2E2E2; }
+.scrollbar::-webkit-scrollbar-thumb { background-color: #242E45; }
+
+.scrollbar {
+  scrollbar-color: #242E45 #E2E2E2;
+  scrollbar-width: thin;
+}
+
+
+.dropdown {
+  width: 100%;
+  position: relative;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dropdown input {
+  display: none;
+}
+
+.dropdown__value {
+  width: 100%;
+  height: 50px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 22px;
+  border: 2px solid #E2E2E2;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dropdown__value:hover {
+  border: 2px solid #242E45;
+}
+
+.dropdown__value span {
+  font-family: 'TT Travels', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: #757575;
+}
+
+.dropdown__arrow {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 9px;
+  height: 6px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dropdown__arrow svg {
+  width: 100%;
+  max-height: 100%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dropdown__list {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 210px;
+  background-color: #Fff;
+  opacity: 0;
+  pointer-events: none;
+  top: 48px;
+  padding: 0 16px;
+  padding-bottom: 10px;
+  border-right: 2px solid #242E45;
+  border-bottom: 2px solid #242E45;
+  border-left: 2px solid #242E45;
+  -webkit-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  transform: translateY(15px);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dropdown-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.dropdown-list li {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  height: 48px;
+  font-family: 'TT Travels', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: #232323;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dropdown-list li:hover {
+  color: #F39090;
+}
+
+.dropdown.active .dropdown__list {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown.active .dropdown__value {
+  border: 2px solid #242E45;
+  border-bottom-color: transparent;
+}
+
+.dropdown.active .dropdown__arrow {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

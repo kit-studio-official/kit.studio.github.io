@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>
+    MORO
+  </title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/elements.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/adaptive.css">
+
+  <!-- mobile -->
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephone=no">
+
+  <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="mob-menu">
+      <div class="mm-logo-block">
+        <a href="index.html" class="mm-logo">
+          <svg width="74" height="36" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30.2169 0H31.6521C33.3385 0.132632 35.0935 0.594474 36.3535 1.78342C37.7035 3.02447 38.2956 4.89316 38.305 6.69079C38.3192 9.82895 38.305 12.9671 38.3098 16.1053C38.3429 18.2534 38.3358 20.5697 37.1279 22.4432C36.0906 24.1271 34.1153 24.9584 32.2111 25.1289C30.0227 25.3279 27.5974 25.1266 25.8211 23.7032C24.0661 22.2939 23.5048 19.9232 23.4953 17.7703C23.4906 14.0518 23.4858 10.3311 23.4977 6.61263C23.5095 4.83395 24.1182 2.98895 25.4635 1.77158C26.7471 0.587368 28.514 0.127895 30.2169 0ZM29.9445 4.66816C29.3145 4.98316 28.9924 5.69842 29.0042 6.38289C28.9971 10.485 28.9948 14.5895 29.0066 18.6916C28.964 19.7076 29.7408 20.7332 30.8066 20.7521C31.9292 20.8374 32.8482 19.7739 32.7937 18.6892C32.8174 14.7505 32.7914 10.8118 32.8056 6.87079C32.8008 6.34263 32.8103 5.77421 32.519 5.30763C32.0145 4.44789 30.7971 4.20868 29.9445 4.66816Z" fill="#FFF"/>
+          <path d="M65.6662 0H66.642C68.4065 0.101842 70.2538 0.589737 71.5541 1.85684C72.717 2.96526 73.2736 4.56158 73.4204 6.13421V18.4168C73.283 20.2074 72.8141 22.1068 71.4736 23.3929C70.0596 24.7761 67.992 25.1929 66.0783 25.1953C64.0983 25.2118 61.9549 24.7737 60.5125 23.3195C59.0796 21.8676 58.6273 19.7432 58.6178 17.7655C58.6178 14.0542 58.6154 10.3429 58.6201 6.63158C58.6225 4.86474 59.2217 3.02921 60.5457 1.80711C61.9146 0.530526 63.8354 0.0544737 65.6662 0ZM65.3938 4.53553C64.5815 4.74632 64.0841 5.58947 64.1267 6.40184C64.1244 10.5063 64.1196 14.6108 64.1291 18.7153C64.0794 19.7811 64.9699 20.8255 66.0736 20.7521C67.1299 20.7474 67.9399 19.7432 67.9091 18.7247C67.9209 14.6961 67.9067 10.665 67.9162 6.63395C67.9209 6.18158 67.883 5.70789 67.6415 5.31237C67.2033 4.55684 66.1991 4.27026 65.3938 4.53553Z" fill="#FFF"/>
+          <path d="M0 0.475174C2.55553 0.475174 5.10868 0.472805 7.66421 0.475174C8.23263 3.60623 8.80342 6.73728 9.37658 9.86833C9.88342 12.5423 9.94974 15.2731 10.305 17.966C10.6437 15.0196 10.7645 12.0425 11.3424 9.12702C11.8682 6.24465 12.3939 3.35991 12.9174 0.477542C15.4753 0.472805 18.0332 0.475174 20.5911 0.475174C20.5934 8.50649 20.5911 16.5402 20.5911 24.5739C18.8384 24.5739 17.0882 24.5739 15.3355 24.5739C15.2905 18.2336 15.3663 11.8933 15.5653 5.55781C14.5374 11.9099 13.3082 18.2312 12.2068 24.5715C10.9303 24.5762 9.65368 24.5739 8.3771 24.5715C7.34684 18.8257 6.31658 13.0799 5.28395 7.33412C5.18684 6.75623 5.12526 6.17123 5.05421 5.59096C4.98079 7.10202 5.10395 8.6107 5.1371 10.1218C5.29579 14.9368 5.24842 19.7565 5.25553 24.5739C3.50289 24.5739 1.75263 24.5739 0 24.5739V0.475174Z" fill="#FFF"/>
+          <path d="M41.2419 0.476851C44.2356 0.481588 47.2292 0.462641 50.2229 0.486325C52.0703 0.517114 53.9887 1.35317 54.974 2.9708C56.1132 4.8158 56.0327 7.12501 55.6561 9.1808C55.379 10.7345 54.254 12.0253 52.8211 12.6434C54.3274 13.0792 55.4429 14.4553 55.5827 16.0161C55.7437 18.079 55.5613 20.1537 55.6821 22.219C55.7224 22.8655 55.9285 23.6353 56.6295 23.8461C56.6319 24.0284 56.6342 24.3932 56.6366 24.5755C54.9006 24.5495 53.1598 24.6276 51.4237 24.5376C50.564 24.4026 50.2585 23.4482 50.1992 22.6974C50.0429 20.7766 50.2135 18.844 50.1045 16.9232C50.0666 16.3216 49.8037 15.6726 49.2211 15.4121C48.4442 15.0734 47.5703 15.2061 46.7485 15.1753C46.7485 18.3087 46.7485 21.4421 46.7485 24.5755C44.9106 24.5755 43.075 24.5755 41.2395 24.5755C41.2419 16.5419 41.2371 8.50817 41.2419 0.476851ZM46.7461 10.8363C47.6271 10.7961 48.6171 11.0092 49.3963 10.4858C50.1756 9.93396 50.3603 8.90369 50.3887 8.0108C50.4006 7.0729 50.2916 6.00475 49.5716 5.32501C48.809 4.62159 47.6911 4.85843 46.7485 4.81343C46.7437 6.82185 46.7508 8.8279 46.7461 10.8363Z" fill="#FFF"/>
+          <path d="M12.444 27.3553C13.1711 26.723 14.2937 27.0569 14.7461 27.8551C14.7366 27.6396 14.7295 27.424 14.7224 27.2085C15.2908 27.2061 15.8616 27.2061 16.4301 27.2085C16.4064 29.5864 16.4845 31.969 16.3945 34.3446C16.3566 35.2943 15.4898 35.948 14.5874 36.0001H13.7537C12.6785 35.9859 11.7808 35.1522 11.8258 34.0485C12.4156 34.0461 13.0029 34.0461 13.5927 34.0438C13.6258 34.1811 13.6945 34.4582 13.7277 34.598C14.0214 34.6311 14.5922 34.7898 14.6182 34.3232C14.6774 33.8614 14.6585 33.3948 14.6751 32.9306C14.1043 33.5038 13.1308 33.8472 12.4416 33.2693C11.6127 32.5232 11.9135 31.2964 11.8543 30.3111C11.9253 29.3282 11.5795 28.0848 12.444 27.3553ZM13.7774 28.7006C13.4695 29.5817 13.6566 30.5764 13.6424 31.5001C13.5264 32.104 14.5116 32.329 14.6158 31.7203C14.6845 30.7896 14.6822 29.8446 14.6158 28.9138C14.5708 28.5324 14.0095 28.3974 13.7774 28.7006Z" fill="#FFF"/>
+          <path d="M25.2734 28.0873C25.5576 27.5401 25.9816 27.0191 26.6495 26.9812C26.6613 27.668 26.6613 28.3549 26.6637 29.0417C26.1497 29.082 25.4984 29.2501 25.4392 29.8636C25.3208 31.1638 25.4179 32.4736 25.3871 33.7786C24.7997 33.7809 24.2124 33.7809 23.625 33.7786C23.625 31.5878 23.625 29.3994 23.625 27.2086C24.1792 27.2062 24.7311 27.2062 25.2853 27.2062C25.2829 27.4265 25.2758 27.867 25.2734 28.0873Z" fill="#FFF"/>
+          <path d="M34.6951 27.1799C35.6449 26.8886 36.9096 26.9336 37.542 27.8099C38.1625 28.7549 37.9399 29.9462 37.9872 31.012C38.0086 31.9736 37.9138 33.1791 36.957 33.6883C35.9741 34.1336 34.5578 34.0981 33.8591 33.1696C33.1722 32.1157 33.473 30.7846 33.4115 29.6028C33.3712 28.6578 33.6933 27.4996 34.6951 27.1799ZM35.3157 28.6365C35.0646 29.3209 35.2351 30.0765 35.1854 30.7941C35.2233 31.3199 35.0717 31.9073 35.3441 32.3881C35.6496 32.7267 36.2322 32.4473 36.1896 32.0067C36.2109 30.967 36.2417 29.9225 36.173 28.8828C36.1517 28.4636 35.5762 28.3594 35.3157 28.6365Z" fill="#FFF"/>
+          <path d="M58.3173 27.9163C58.7104 27.4332 59.2315 26.9192 59.9183 27.0282C60.7236 27.0827 61.2233 27.8879 61.2683 28.6316C61.3275 29.8324 61.3015 31.0356 61.2873 32.2387C61.2968 33.1056 60.6075 34.0174 59.6791 33.9582C59.1794 33.9629 58.8383 33.5627 58.502 33.2548C58.5233 34.169 58.5115 35.0856 58.5139 35.9998H56.7375C56.7375 33.0677 56.7375 30.1379 56.7375 27.2082C57.2728 27.2058 57.8081 27.2082 58.3433 27.2082C58.3362 27.3858 58.3244 27.7387 58.3173 27.9163ZM58.6252 28.7548C58.3931 29.6453 58.5636 30.595 58.5139 31.5092C58.5139 31.8456 58.4925 32.4424 58.9662 32.4613C59.3878 32.5703 59.5536 32.0563 59.5252 31.7342C59.5252 30.7916 59.5962 29.8371 59.4731 28.9016C59.3997 28.4966 58.8336 28.4161 58.6252 28.7548Z" fill="#FFF"/>
+          <path d="M45.0924 32.848C45.064 30.9628 45.0497 29.0728 45.1019 27.1875C45.6845 27.2112 46.2671 27.2112 46.8497 27.2088C46.864 28.8028 46.8284 30.3991 46.8663 31.9954C46.7929 32.5259 47.6811 32.6586 47.7474 32.128C47.8303 30.4914 47.7569 28.8478 47.7829 27.2088C48.3703 27.2064 48.9576 27.2064 49.545 27.2088C49.545 29.3972 49.5426 31.588 49.545 33.7788C48.9884 33.7812 48.4342 33.7812 47.88 33.7788C47.8871 33.5917 47.9013 33.2199 47.9061 33.0328C47.4987 34.3117 45.1634 34.3022 45.0924 32.848Z" fill="#FFF"/>
+          </svg>
+        </a>
+
+        <div class="mm-cancel">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1.89355" y="0.186279" width="31" height="1.44001" rx="0.720003" transform="rotate(45 1.89355 0.186279)" fill="white"/>
+          <rect x="1.03076" y="21.9509" width="31" height="1.44" rx="0.719999" transform="rotate(-45 1.03076 21.9509)" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      <ul class="mm-list">
+        <li><a href="about.html" class="mm-list-item h5">О компании</a></li>
+        <li>
+          <div class="mm-list__btn-list">
+            <p class="mm-list-item h5">Aссортимент</p>
+            <div class="mm-btn-list__arrow">
+              <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 6L0 1.41832L1.33787 0L4.5 3.22693L7.66213 0L9 1.41832L4.5 6Z" fill="#E5D7C3"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mm-list__hidden-list">
+            <a class="paragraph-big" href="catalog.html">Новинки</a>
+            <a class="paragraph-big" href="catalog.html">Бестселлеры</a>
+            <a class="paragraph-big" href="catalog.html">Выбор Morotrade</a>
+            <a class="paragraph-big" href="catalog.html">Акции</a>
+          </div>
+        </li>
+        <li>
+          <div class="mm-list__btn-list">
+            <p class="mm-list-item h5">Производители</p>
+            <div class="mm-btn-list__arrow">
+              <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 6L0 1.41832L1.33787 0L4.5 3.22693L7.66213 0L9 1.41832L4.5 6Z" fill="#E5D7C3"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mm-list__hidden-list">
+            <a class="paragraph-big" href="catalog.html">Новинки</a>
+            <a class="paragraph-big" href="catalog.html">Бестселлеры</a>
+            <a class="paragraph-big" href="catalog.html">Выбор Morotrade</a>
+            <a class="paragraph-big" href="catalog.html">Акции</a>
+          </div>
+        </li>
+        <li><a href="partner.html" class="mm-list-item h5">Партнёрам</a></li>
+        <li><a href="news.html" class="mm-list-item h5">Новости</a></li>
+        <li><a href="blog.html" class="mm-list-item h5">Блог</a></li>
+
+      </ul>
+
+      <div class="mm-footer">
+        <div class="mm-footer__contact-block">
+          <a href="tel:+84953089710" target="_blank" class="mm-footer__tel">8 (495) 308-97-10</a>
+
+          <a href="mailto:info@morotrade.ru" target="_blank" class="mm-footer__email">info@morotrade.ru</a>
+
+          <a href="contact.html" class="mm-footer__btn button-small">Контаты</a>
+        </div>
+
+        <div class="mm-footer__social-block">
+          <a href="https://www.instagram.com/" class="mm-footer__social-icon">
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.3664 9.29199C13.9004 9.29199 9.37134 13.7429 9.37134 19.2871C9.37134 24.8313 13.8223 29.2822 19.3664 29.2822C24.9106 29.2822 29.3616 24.7532 29.3616 19.2871C29.3616 13.821 24.8325 9.29199 19.3664 9.29199ZM19.3664 25.6902C15.8525 25.6902 12.9633 22.801 12.9633 19.2871C12.9633 15.7732 15.8525 12.884 19.3664 12.884C22.8804 12.884 25.7696 15.7732 25.7696 19.2871C25.7696 22.801 22.8804 25.6902 19.3664 25.6902Z" fill="#ffffff"/>
+            <path d="M29.7513 11.3222C31.002 11.3222 32.0159 10.3084 32.0159 9.05773C32.0159 7.80707 31.002 6.79321 29.7513 6.79321C28.5007 6.79321 27.4868 7.80707 27.4868 9.05773C27.4868 10.3084 28.5007 11.3222 29.7513 11.3222Z" fill="#ffffff"/>
+            <path d="M35.6076 3.20156C33.5773 1.09321 30.6881 0 27.4085 0H11.3226C4.52903 0 0 4.52903 0 11.3226V27.3304C0 30.6881 1.09321 33.5773 3.27964 35.6857C5.38799 37.7159 8.19911 38.731 11.4007 38.731H27.3304C30.6881 38.731 33.4992 37.6378 35.5295 35.6857C37.6378 33.6554 38.731 30.7662 38.731 27.4085V11.3226C38.731 8.04294 37.6378 5.23181 35.6076 3.20156ZM35.2952 27.4085C35.2952 29.8291 34.4363 31.7813 33.0307 33.1088C31.6251 34.4363 29.673 35.139 27.3304 35.139H11.4007C9.05807 35.139 7.1059 34.4363 5.70033 33.1088C4.29477 31.7032 3.59199 29.7511 3.59199 27.3304V11.3226C3.59199 8.97998 4.29477 7.02781 5.70033 5.62225C7.02781 4.29477 9.05807 3.59199 11.4007 3.59199H27.4865C29.8291 3.59199 31.7813 4.29477 33.1869 5.70033C34.5144 7.1059 35.2952 9.05806 35.2952 11.3226V27.4085Z" fill="#ffffff"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/" class="mm-footer__social-icon">
+            <svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 9.00049H5V18.0005H2V9.00049H0V6.00049H2V4.00049C2 2.53049 1.708 0.000488281 5 0.000488281H8V3.00049H6C5.45348 3.01417 5.01368 3.45397 5 4.00049V6.00049H8L7 9.00049Z" fill="#ffffff"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="first-pop-up-block">
+      <div class="pop-up">
+        <div class="pop-up__img">
+          <img src="img/pop-up-img.png" alt="">
+        </div>
+
+        <div class="pop-up__text-box">
+          <h5 class="h5">Для доступа <br>на сайт необходимо подтвердить возраст</h5>
+
+          <p class="paragraph-small">Наш контент ограничен по возрасту <br>для гостей старше 18 лет.</p>
+
+          <div class="pop-up__btn button-small">Мне исполнилось 18 лет</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-pop-up-block">
+      <div class="call-pop-up-block__container">
+        <div class="call-pop-up-block__block scrollbar">
+          <div class="call-pop-up">
+        <form action="">
+          <div class="c-pop-up__header">
+            <h5>Обратная связь</h5>
+            <div class="c-pop-up__cancel pop-up-cancel">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.41406 0.335938L0.335938 1.41406L6.92188 8L0.335938 14.5859L1.41406 15.6641L8 9.07812L14.5859 15.6641L15.6641 14.5859L9.07812 8L15.6641 1.41406L14.5859 0.335938L8 6.92188L1.41406 0.335938Z" fill="black"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="c-pop-up__input-block">
+            <div class="c-pop-up__input-box">
+              <p>Тема обращения</p>
+              <div class="c-pop-up__input dropdown">
+                <input type="text">
+                <div class="dropdown__value">
+                  <span>
+                    Выберите тему обращения
+                  </span>
+                  <div class="dropdown__arrow">
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.5 6L0 1.41832L1.33787 0L4.5 3.22693L7.66213 0L9 1.41832L4.5 6Z" fill="#242E45"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown__list">
+                  <ul class="dropdown-list scrollbar">
+                    <li>Обслуживание и сервис</li>
+                    <li>Вопросы сотрудничества2</li>
+                    <li>Работа сайта</li>
+                    <li>Отзывы о компании</li>
+                    <li>Отзывы о компании</li>
+                    <li>Отзывы о компании</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-pop-up__input-box">
+              <p>Сообщение</p>
+              <textarea name="name" placeholder="Ваше сообщение"></textarea>
+            </div>
+
+            <div class="c-pop-up__input-row">
+              <div class="c-pop-up__input-box">
+                <p>Ваше имя</p>
+                <input type="text" placeholder="Введите ваше имя">
+              </div>
+              <div class="c-pop-up__input-box">
+                <p>Ваш город</p>
+                <div class="c-pop-up__input c-pop-up__input-bottom dropdown">
+                  <input type="text">
+                  <div class="dropdown__value">
+                    <span>
+                      Выберите ваш город
+                    </span>
+                    <div class="dropdown__arrow">
+                      <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 6L0 1.41832L1.33787 0L4.5 3.22693L7.66213 0L9 1.41832L4.5 6Z" fill="#242E45"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="dropdown__list">
+                    <ul class="dropdown-list scrollbar">
+                      <li>value 1</li>
+                      <li>value 2</li>
+                      <li>value 3</li>
+                      <li>value 4</li>
+                      <li>value 5</li>
+                      <li>value 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-pop-up__input-row">
+              <div class="c-pop-up__input-box">
+                <p>Телефон</p>
+                <input class="phone-mask" type="text" placeholder="+7 (___) ___ __ __">
+              </div>
+              <div class="c-pop-up__input-box">
+                <p>E-mail</p>
+                <input type="email" placeholder="Введите e-mail">
+              </div>
+            </div>
+
+            <!-- <input class="button-big c-pop-up__btn" type="submit" value="Отправить сообщение"> -->
+
+            <div class="button-big c-pop-up__btn">Отправить сообщение</div>
+          </div>
+        </form>
+      </div>
+          <div class="thanks-pop-up">
+            <div class="thanks-pop-up__img">
+              <img src="img/thanks-pop-up-img.svg" alt="">
+            </div>
+
+            <p>Спасибо, ваш запрос отправлен. <br>В ближайшее время сотрудники MoRo Trade <br>свяжутся с вами.</p>
+
+            <div class="button-small thanks-pop-up__btn">закрыть окно</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header dark">
+      <div class="container">
+        <div class="logo-block">
+          <a href="index.html" class="logo">
+            <svg width="74" height="36" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30.2169 0H31.6521C33.3385 0.132632 35.0935 0.594474 36.3535 1.78342C37.7035 3.02447 38.2956 4.89316 38.305 6.69079C38.3192 9.82895 38.305 12.9671 38.3098 16.1053C38.3429 18.2534 38.3358 20.5697 37.1279 22.4432C36.0906 24.1271 34.1153 24.9584 32.2111 25.1289C30.0227 25.3279 27.5974 25.1266 25.8211 23.7032C24.0661 22.2939 23.5048 19.9232 23.4953 17.7703C23.4906 14.0518 23.4858 10.3311 23.4977 6.61263C23.5095 4.83395 24.1182 2.98895 25.4635 1.77158C26.7471 0.587368 28.514 0.127895 30.2169 0ZM29.9445 4.66816C29.3145 4.98316 28.9924 5.69842 29.0042 6.38289C28.9971 10.485 28.9948 14.5895 29.0066 18.6916C28.964 19.7076 29.7408 20.7332 30.8066 20.7521C31.9292 20.8374 32.8482 19.7739 32.7937 18.6892C32.8174 14.7505 32.7914 10.8118 32.8056 6.87079C32.8008 6.34263 32.8103 5.77421 32.519 5.30763C32.0145 4.44789 30.7971 4.20868 29.9445 4.66816Z" fill="#232323"/>
+              <path d="M65.6662 0H66.642C68.4065 0.101842 70.2538 0.589737 71.5541 1.85684C72.717 2.96526 73.2736 4.56158 73.4204 6.13421V18.4168C73.283 20.2074 72.8141 22.1068 71.4736 23.3929C70.0596 24.7761 67.992 25.1929 66.0783 25.1953C64.0983 25.2118 61.9549 24.7737 60.5125 23.3195C59.0796 21.8676 58.6273 19.7432 58.6178 17.7655C58.6178 14.0542 58.6154 10.3429 58.6201 6.63158C58.6225 4.86474 59.2217 3.02921 60.5457 1.80711C61.9146 0.530526 63.8354 0.0544737 65.6662 0ZM65.3938 4.53553C64.5815 4.74632 64.0841 5.58947 64.1267 6.40184C64.1244 10.5063 64.1196 14.6108 64.1291 18.7153C64.0794 19.7811 64.9699 20.8255 66.0736 20.7521C67.1299 20.7474 67.9399 19.7432 67.9091 18.7247C67.9209 14.6961 67.9067 10.665 67.9162 6.63395C67.9209 6.18158 67.883 5.70789 67.6415 5.31237C67.2033 4.55684 66.1991 4.27026 65.3938 4.53553Z" fill="#232323"/>
+              <path d="M0 0.475174C2.55553 0.475174 5.10868 0.472805 7.66421   0.475174C8.23263 3.60623 8.80342 6.73728 9.37658 9.86833C9.88342 12.5423 9.94974 15.2731 10.305 17.966C10.6437 15.0196 10.7645 12.0425 11.3424 9.12702C11.8682 6.24465 12.3939 3.35991 12.9174 0.477542C15.4753 0.472805 18.0332 0.475174 20.5911 0.475174C20.5934 8.50649 20.5911 16.5402 20.5911 24.5739C18.8384 24.5739 17.0882 24.5739 15.3355 24.5739C15.2905 18.2336 15.3663 11.8933 15.5653 5.55781C14.5374 11.9099 13.3082 18.2312 12.2068 24.5715C10.9303 24.5762 9.65368 24.5739 8.3771 24.5715C7.34684 18.8257 6.31658 13.0799 5.28395 7.33412C5.18684 6.75623 5.12526 6.17123 5.05421 5.59096C4.98079 7.10202 5.10395 8.6107 5.1371 10.1218C5.29579 14.9368 5.24842 19.7565 5.25553 24.5739C3.50289 24.5739 1.75263 24.5739 0 24.5739V0.475174Z" fill="#232323"/>
+              <path d="M41.2419 0.476851C44.2356 0.481588 47.2292 0.462641 50.2229 0.486325C52.0703 0.517114 53.9887 1.35317 54.974 2.9708C56.1132 4.8158 56.0327 7.12501 55.6561 9.1808C55.379 10.7345 54.254 12.0253 52.8211 12.6434C54.3274 13.0792 55.4429 14.4553 55.5827 16.0161C55.7437 18.079 55.5613 20.1537 55.6821 22.219C55.7224 22.8655 55.9285 23.6353 56.6295 23.8461C56.6319 24.0284 56.6342 24.3932 56.6366 24.5755C54.9006 24.5495 53.1598 24.6276 51.4237 24.5376C50.564 24.4026 50.2585 23.4482 50.1992 22.6974C50.0429 20.7766 50.2135 18.844 50.1045 16.9232C50.0666 16.3216 49.8037 15.6726 49.2211 15.4121C48.4442 15.0734 47.5703 15.2061 46.7485 15.1753C46.7485 18.3087 46.7485 21.4421 46.7485 24.5755C44.9106 24.5755 43.075 24.5755 41.2395 24.5755C41.2419 16.5419 41.2371 8.50817 41.2419 0.476851ZM46.7461 10.8363C47.6271 10.7961 48.6171 11.0092 49.3963 10.4858C50.1756 9.93396 50.3603 8.90369 50.3887 8.0108C50.4006 7.0729 50.2916 6.00475 49.5716 5.32501C48.809 4.62159 47.6911 4.85843 46.7485 4.81343C46.7437 6.82185 46.7508 8.8279 46.7461 10.8363Z" fill="#232323"/>
+              <path d="M12.444 27.3553C13.1711 26.723 14.2937 27.0569 14.7461 27.8551C14.7366 27.6396 14.7295 27.424 14.7224 27.2085C15.2908 27.2061 15.8616 27.2061 16.4301 27.2085C16.4064 29.5864 16.4845 31.969 16.3945 34.3446C16.3566 35.2943 15.4898 35.948 14.5874 36.0001H13.7537C12.6785 35.9859 11.7808 35.1522 11.8258 34.0485C12.4156 34.0461 13.0029 34.0461 13.5927 34.0438C13.6258 34.1811 13.6945 34.4582 13.7277 34.598C14.0214 34.6311 14.5922 34.7898 14.6182 34.3232C14.6774 33.8614 14.6585 33.3948 14.6751 32.9306C14.1043 33.5038 13.1308 33.8472 12.4416 33.2693C11.6127 32.5232 11.9135 31.2964 11.8543 30.3111C11.9253 29.3282 11.5795 28.0848 12.444 27.3553ZM13.7774 28.7006C13.4695 29.5817 13.6566 30.5764 13.6424 31.5001C13.5264 32.104 14.5116 32.329 14.6158 31.7203C14.6845 30.7896 14.6822 29.8446 14.6158 28.9138C14.5708 28.5324 14.0095 28.3974 13.7774 28.7006Z" fill="#232323"/>
+              <path d="M25.2734 28.0873C25.5576 27.5401 25.9816 27.0191 26.6495 26.9812C26.6613 27.668 26.6613 28.3549 26.6637 29.0417C26.1497 29.082 25.4984 29.2501 25.4392 29.8636C25.3208 31.1638 25.4179 32.4736 25.3871 33.7786C24.7997 33.7809 24.2124 33.7809 23.625 33.7786C23.625 31.5878 23.625 29.3994 23.625 27.2086C24.1792 27.2062 24.7311 27.2062 25.2853 27.2062C25.2829 27.4265 25.2758 27.867 25.2734 28.0873Z" fill="#232323"/>
+              <path d="M34.6951 27.1799C35.6449 26.8886 36.9096 26.9336 37.542 27.8099C38.1625 28.7549 37.9399 29.9462 37.9872 31.012C38.0086 31.9736 37.9138 33.1791 36.957 33.6883C35.9741 34.1336 34.5578 34.0981 33.8591 33.1696C33.1722 32.1157 33.473 30.7846 33.4115 29.6028C33.3712 28.6578 33.6933 27.4996 34.6951 27.1799ZM35.3157 28.6365C35.0646 29.3209 35.2351 30.0765 35.1854 30.7941C35.2233 31.3199 35.0717 31.9073 35.3441 32.3881C35.6496 32.7267 36.2322 32.4473 36.1896 32.0067C36.2109 30.967 36.2417 29.9225 36.173 28.8828C36.1517 28.4636 35.5762 28.3594 35.3157 28.6365Z" fill="#232323"/>
+              <path d="M58.3173 27.9163C58.7104 27.4332 59.2315 26.9192 59.9183 27.0282C60.7236 27.0827 61.2233 27.8879 61.2683 28.6316C61.3275 29.8324 61.3015 31.0356 61.2873 32.2387C61.2968 33.1056 60.6075 34.0174 59.6791 33.9582C59.1794 33.9629 58.8383 33.5627 58.502 33.2548C58.5233 34.169 58.5115 35.0856 58.5139 35.9998H56.7375C56.7375 33.0677 56.7375 30.1379 56.7375 27.2082C57.2728 27.2058 57.8081 27.2082 58.3433 27.2082C58.3362 27.3858 58.3244 27.7387 58.3173 27.9163ZM58.6252 28.7548C58.3931 29.6453 58.5636 30.595 58.5139 31.5092C58.5139 31.8456 58.4925 32.4424 58.9662 32.4613C59.3878 32.5703 59.5536 32.0563 59.5252 31.7342C59.5252 30.7916 59.5962 29.8371 59.4731 28.9016C59.3997 28.4966 58.8336 28.4161 58.6252 28.7548Z" fill="#232323"/>
+              <path d="M45.0924 32.848C45.064 30.9628 45.0497 29.0728 45.1019 27.1875C45.6845 27.2112 46.2671 27.2112 46.8497 27.2088C46.864 28.8028 46.8284 30.3991 46.8663 31.9954C46.7929 32.5259 47.6811 32.6586 47.7474 32.128C47.8303 30.4914 47.7569 28.8478 47.7829 27.2088C48.3703 27.2064 48.9576 27.2064 49.545 27.2088C49.545 29.3972 49.5426 31.588 49.545 33.7788C48.9884 33.7812 48.4342 33.7812 47.88 33.7788C47.8871 33.5917 47.9013 33.2199 47.9061 33.0328C47.4987 34.3117 45.1634 34.3022 45.0924 32.848Z" fill="#232323"/>
+            </svg>
+          </a>
+          <nav class="nav-block">
+            <a href="about.html" class="nav">о компании</a>
+            <a href="catalog.html" class="nav">Aссортимент</a>
+            <a href="maker.html" class="nav">Производители</a>
+            <a href="partner.html" class="nav">партнёрам</a>
+            <a href="news.html" class="nav">новости</a>
+            <a href="blog.html" class="nav">блог</a>
+          </nav>
+        </div>
+
+        <div class="btn-block">
+          <div class="call-btn button-small callback">связаться с нами</div>
+          <a href="contact.html" class="btn-contact">контакты</a>
+          <div class="header-search">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 20.9999L16.65 16.6499" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="mob-header__menu">
+            <svg width="31" height="6" viewBox="0 0 31 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="31" height="1.44001" rx="0.720003" fill="#232323"/>
+            <rect y="4.14014" width="31" height="1.44" rx="0.719999" fill="#232323"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-popup">
+      <div class="search-popup__container">
+        <div class="search-popup__content">
+          <div class="search-popup__form">
+            <form action="">
+              <div class="search-popup__search">
+                <input type="text" class="search-popup__search-input" placeholder="Поиск по каталогу">
+                <input class="search-pop-up__search-icon" type="submit" value="Поиск">
+              </div>
+              <div class="search-popup__close">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.703364 0L0 0.703364L4.29664 5L0 9.29664L0.703364 10L5 5.70336L9.29664 10L10 9.29664L5.70336 5L10 0.703364L9.29664 0L5 4.29664L0.703364 0Z" fill="#757575" />
+                </svg>
+                <span>
+                  Закрыть
+                </span>
+              </div>
+            </form>
+            <div class="search-popup__results scrollbar">
+              <ul>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="product-card-1.html" class="search-popup__item">
+                    <div class="search-popup__item-preview">
+                      <img src="img/card/product-1.png" alt="">
+                    </div>
+                    <div class="search-popup__item-info">
+                      <div>
+                        <span class="search-popup__item-name">MARIETO</span>
+                        <span class="search-popup__item-count">8 товаров</span>
+                      </div>
+                      <div>
+                        Вино, Испания
+                      </div>
+                    </div>
+                    <span class="search-popup__item-category" style="background-color: #F39090;">
+                      Вино
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <div class="search-popup__results-clear">
+                Ничего не найдено
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="article-page">
+      <section class="a-main-section">
+        <div class="a-main-section__text">
+          <p class="paragraph-small">21 августа 2020</p>
+          <h3 class="h3">Приорат нового поколения <br>с пикантным вкусом  древности</h3>
+        </div>
+      </section>
+      <section class="c-navigation-section">
+        <div class="container">
+          <div class="c-nav-section__pc">
+            <ul class="c-nav-section__link-block">
+              <li class="paragraph-small">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="paragraph-small">
+                <a href="news.html">Новости</a>
+              </li>
+              <li class="paragraph-small">
+                <a href="article.html">Приорат нового поколения с пикантным вкусом  древности</a>
+              </li>
+            </ul>
+
+            <div class="c-pc-nav-section__share-block">
+              <span class="paragraph-small">Поделиться</span>
+              <a href="https://www.instagram.com/" target="_blank" class="c-pc-nav-section__share-box">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.57143 0H11.4286C13.9533 0 16 2.0467 16 4.57143V11.4286C16 13.9533 13.9533 16 11.4286 16H4.57143C2.0467 16 0 13.9533 0 11.4286V4.57143C0 2.0467 2.0467 0 4.57143 0ZM4.57143 1.52381H11.4286C13.1117 1.52381 14.4762 2.88827 14.4762 4.57143V11.4286C14.4762 13.1117 13.1117 14.4762 11.4286 14.4762H4.57143C2.88827 14.4762 1.52381 13.1117 1.52381 11.4286V4.57143C1.52381 2.88827 2.88827 1.52381 4.57143 1.52381ZM12.1905 8C12.1905 5.68566 10.3143 3.80952 8 3.80952C5.71907 3.88825 3.88825 5.71907 3.80952 8C3.80952 10.3143 5.68566 12.1905 8 12.1905C10.3143 12.1905 12.1905 10.3143 12.1905 8ZM8.06104 5.33333C8.75238 5.33293 9.41555 5.60728 9.90454 6.09599C10.3935 6.5847 10.6683 7.24771 10.6683 7.93905C10.6263 9.42081 9.4339 10.6116 7.95209 10.6514C7.26081 10.6518 6.59773 10.3775 6.10885 9.88873C5.61998 9.39999 5.34541 8.73699 5.34561 8.04572C5.3879 6.5644 6.57968 5.37396 8.06104 5.33333ZM12.9524 3.80952C12.9524 3.38874 12.6113 3.04762 12.1905 3.04762C11.7697 3.04762 11.4286 3.38874 11.4286 3.80952C11.4286 4.23031 11.7697 4.57143 12.1905 4.57143C12.6113 4.57143 12.9524 4.23031 12.9524 3.80952Z" fill="#242E45"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" class="c-pc-nav-section__share-box">
+                <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.22222 8H4.44444V16H1.77778V8H0V5.33333H1.77778V3.55556C1.77778 2.24889 1.51822 0 4.44444 0H7.11111V2.66667H5.33333C4.84754 2.67883 4.45661 3.06976 4.44444 3.55556V5.33333H7.11111L6.22222 8Z" fill="#242E45"/>
+                </svg>
+              </a>
+              <a href="https://vk.com/" target="_blank" class="c-pc-nav-section__share-box">
+                <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3722 0.366966H12.7758C12.6698 0.366966 12.5658 0.393402 12.4749 0.44346C12.3839 0.493519 12.3094 0.565327 12.2593 0.651243C12.2593 0.651243 11.2238 2.40596 10.8912 2.99698C9.99633 4.58691 9.41686 4.08777 9.41686 3.34988V0.8056C9.41686 0.592992 9.32506 0.389092 9.16167 0.238756C8.99828 0.0884191 8.77667 0.00396092 8.5456 0.00396092H6.59346C6.32762 -0.0142259 6.06113 0.0304221 5.81931 0.133664C5.57749 0.236907 5.36837 0.395315 5.21182 0.593845C5.21182 0.593845 6.20308 0.446378 6.20308 1.6753C6.20308 1.98003 6.22014 2.85668 6.23569 3.59197C6.23862 3.70032 6.20535 3.80689 6.14036 3.89729C6.07537 3.98769 5.98181 4.05757 5.87229 4.09749C5.76277 4.13741 5.64258 4.14545 5.52794 4.12052C5.41329 4.09559 5.30973 4.0389 5.23121 3.9581C4.43218 2.93558 3.7703 1.82799 3.25998 0.659404C3.21616 0.571987 3.146 0.497971 3.05783 0.446137C2.96966 0.394303 2.86718 0.366826 2.76255 0.366966C2.19948 0.366966 1.07272 0.366966 0.40357 0.366966C0.338683 0.36656 0.274658 0.380654 0.216997 0.408037C0.159335 0.435421 0.109761 0.475274 0.0725324 0.524175C0.0353042 0.573076 0.0115351 0.629561 0.0032672 0.688779C-0.00500069 0.747997 0.00247979 0.808176 0.025066 0.864146C0.741367 2.67196 3.82696 8.35309 7.34886 8.35309H8.83123C8.98655 8.35309 9.1355 8.29632 9.24533 8.19526C9.35516 8.09421 9.41686 7.95716 9.41686 7.81425V6.99067C9.41686 6.88735 9.44971 6.7863 9.51136 6.69995C9.57302 6.6136 9.66079 6.54573 9.76385 6.50471C9.86691 6.4637 9.98076 6.45131 10.0914 6.4691C10.202 6.48688 10.3045 6.53405 10.3864 6.6048L12.1606 8.13864C12.32 8.27639 12.5304 8.35308 12.7491 8.35309H15.079C16.2027 8.35309 16.2027 7.63562 15.5901 7.08044C15.1589 6.68972 13.603 5.18073 13.603 5.18073C13.4697 5.05373 13.3902 4.88706 13.3789 4.71084C13.3676 4.53463 13.4251 4.36049 13.5411 4.21991C14.044 3.61096 14.8666 2.61415 15.2155 2.18713C15.6924 1.60346 16.5554 0.366966 15.3722 0.366966Z" fill="#242E45"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="c-nav-section__mob">
+            <a href="#" class="c-mob-nav-section__arrow-back">
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 5.99991H3.135L6.768 1.63991C7.122 1.21591 7.064 0.584909 6.64 0.231909C6.215 -0.122091 5.585 -0.0640909 5.232 0.359909L0.232 6.35991C0.193 6.40691 0.173 6.46191 0.144 6.51391C0.12 6.55591 0.091 6.59191 0.073 6.63791C0.028 6.75291 0.001 6.87391 0.001 6.99591C0.001 6.99691 0 6.99891 0 6.99991C0 7.00091 0.001 7.00291 0.001 7.00391C0.001 7.12591 0.028 7.24691 0.073 7.36191C0.091 7.40791 0.12 7.44391 0.144 7.48591C0.173 7.53791 0.193 7.59291 0.232 7.63991L5.232 13.6399C5.43 13.8769 5.714 13.9999 6 13.9999C6.226 13.9999 6.453 13.9239 6.64 13.7679C7.064 13.4149 7.122 12.7839 6.768 12.3599L3.135 7.99991H15C15.552 7.99991 16 7.55191 16 6.99991C16 6.44791 15.552 5.99991 15 5.99991Z" fill="#242E45"/>
+              </svg>
+            </a>
+
+            <h2 class="c-mob-nav-section__name">Новости</h2>
+
+            <div class="c-mob-nav-section__search">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8C2 4.691 4.691 2 8 2C11.309 2 14 4.691 14 8C14 11.309 11.309 14 8 14C4.691 14 2 11.309 2 8ZM17.707 16.293L14.312 12.897C15.365 11.543 16 9.846 16 8C16 3.589 12.411 0 8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C9.846 16 11.543 15.365 12.897 14.312L16.293 17.707C16.488 17.902 16.744 18 17 18C17.256 18 17.512 17.902 17.707 17.707C18.098 17.316 18.098 16.684 17.707 16.293Z" fill="#242E45"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="a-mob-share-section">
+        <div class="c-pc-nav-section__share-block">
+          <span class="paragraph-small">Поделиться</span>
+          <a href="https://www.instagram.com/" target="_blank" class="c-pc-nav-section__share-box">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.57143 0H11.4286C13.9533 0 16 2.0467 16 4.57143V11.4286C16 13.9533 13.9533 16 11.4286 16H4.57143C2.0467 16 0 13.9533 0 11.4286V4.57143C0 2.0467 2.0467 0 4.57143 0ZM4.57143 1.52381H11.4286C13.1117 1.52381 14.4762 2.88827 14.4762 4.57143V11.4286C14.4762 13.1117 13.1117 14.4762 11.4286 14.4762H4.57143C2.88827 14.4762 1.52381 13.1117 1.52381 11.4286V4.57143C1.52381 2.88827 2.88827 1.52381 4.57143 1.52381ZM12.1905 8C12.1905 5.68566 10.3143 3.80952 8 3.80952C5.71907 3.88825 3.88825 5.71907 3.80952 8C3.80952 10.3143 5.68566 12.1905 8 12.1905C10.3143 12.1905 12.1905 10.3143 12.1905 8ZM8.06104 5.33333C8.75238 5.33293 9.41555 5.60728 9.90454 6.09599C10.3935 6.5847 10.6683 7.24771 10.6683 7.93905C10.6263 9.42081 9.4339 10.6116 7.95209 10.6514C7.26081 10.6518 6.59773 10.3775 6.10885 9.88873C5.61998 9.39999 5.34541 8.73699 5.34561 8.04572C5.3879 6.5644 6.57968 5.37396 8.06104 5.33333ZM12.9524 3.80952C12.9524 3.38874 12.6113 3.04762 12.1905 3.04762C11.7697 3.04762 11.4286 3.38874 11.4286 3.80952C11.4286 4.23031 11.7697 4.57143 12.1905 4.57143C12.6113 4.57143 12.9524 4.23031 12.9524 3.80952Z" fill="#242E45"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="c-pc-nav-section__share-box">
+            <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.22222 8H4.44444V16H1.77778V8H0V5.33333H1.77778V3.55556C1.77778 2.24889 1.51822 0 4.44444 0H7.11111V2.66667H5.33333C4.84754 2.67883 4.45661 3.06976 4.44444 3.55556V5.33333H7.11111L6.22222 8Z" fill="#242E45"/>
+            </svg>
+          </a>
+          <a href="https://vk.com/" target="_blank" class="c-pc-nav-section__share-box">
+            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.3722 0.366966H12.7758C12.6698 0.366966 12.5658 0.393402 12.4749 0.44346C12.3839 0.493519 12.3094 0.565327 12.2593 0.651243C12.2593 0.651243 11.2238 2.40596 10.8912 2.99698C9.99633 4.58691 9.41686 4.08777 9.41686 3.34988V0.8056C9.41686 0.592992 9.32506 0.389092 9.16167 0.238756C8.99828 0.0884191 8.77667 0.00396092 8.5456 0.00396092H6.59346C6.32762 -0.0142259 6.06113 0.0304221 5.81931 0.133664C5.57749 0.236907 5.36837 0.395315 5.21182 0.593845C5.21182 0.593845 6.20308 0.446378 6.20308 1.6753C6.20308 1.98003 6.22014 2.85668 6.23569 3.59197C6.23862 3.70032 6.20535 3.80689 6.14036 3.89729C6.07537 3.98769 5.98181 4.05757 5.87229 4.09749C5.76277 4.13741 5.64258 4.14545 5.52794 4.12052C5.41329 4.09559 5.30973 4.0389 5.23121 3.9581C4.43218 2.93558 3.7703 1.82799 3.25998 0.659404C3.21616 0.571987 3.146 0.497971 3.05783 0.446137C2.96966 0.394303 2.86718 0.366826 2.76255 0.366966C2.19948 0.366966 1.07272 0.366966 0.40357 0.366966C0.338683 0.36656 0.274658 0.380654 0.216997 0.408037C0.159335 0.435421 0.109761 0.475274 0.0725324 0.524175C0.0353042 0.573076 0.0115351 0.629561 0.0032672 0.688779C-0.00500069 0.747997 0.00247979 0.808176 0.025066 0.864146C0.741367 2.67196 3.82696 8.35309 7.34886 8.35309H8.83123C8.98655 8.35309 9.1355 8.29632 9.24533 8.19526C9.35516 8.09421 9.41686 7.95716 9.41686 7.81425V6.99067C9.41686 6.88735 9.44971 6.7863 9.51136 6.69995C9.57302 6.6136 9.66079 6.54573 9.76385 6.50471C9.86691 6.4637 9.98076 6.45131 10.0914 6.4691C10.202 6.48688 10.3045 6.53405 10.3864 6.6048L12.1606 8.13864C12.32 8.27639 12.5304 8.35308 12.7491 8.35309H15.079C16.2027 8.35309 16.2027 7.63562 15.5901 7.08044C15.1589 6.68972 13.603 5.18073 13.603 5.18073C13.4697 5.05373 13.3902 4.88706 13.3789 4.71084C13.3676 4.53463 13.4251 4.36049 13.5411 4.21991C14.044 3.61096 14.8666 2.61415 15.2155 2.18713C15.6924 1.60346 16.5554 0.366966 15.3722 0.366966Z" fill="#242E45"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="a-text-section">
+        <div class="text__large">
+          <p>Вряд ли настоятель древнейшего в Таррагоне монастыря господин Приор предполагал, что в его честь назовут целый винодельческий регион Испании, который носит название Приорат. Вообще виноградные лозы существовали здесь, на замкнутой территории, окруженной обрывистыми холмами и защищенной на северо-западе длинной горной цепью, более двух тысяч лет.</p>
+          <img src="img/article/img-1.png" alt="">
+        </div>
+
+        <div class="text__regular">
+          <h2>Картезианские монахи на местных сланцевых почвах</h2>
+          <p>Которые на самом деле настоящая кладезь минералов, выращивали оливки, миндаль, орехи и, конечно же, виноград. Но в 1835 году монастыри были разрушены, а в конце XIX века лозы поразило нашествие филлоксеры. XX век с его политическими потрясениями и гражданской войной в Испании вообще почти свело на нет виноделие Приората, в котором к 1970-м годам виноградников осталось здесь всего 600 га.</p>
+        </div>
+
+        <div class="text__img-block">
+          <img src="img/article/img-2.png" alt="">
+          <img src="img/article/img-3.png" alt="">
+        </div>
+
+        <div class="text__regular">
+          <p>Наступили 1980-е, и маленькая группа виноделов-романтиков во главе с Рене Барбье, поверив в потенциал Приората, почти с нуля начали возрождать  здесь виноделие. Они помогали друг другу, делились технологиями и вообще трудились как одна семья. Их союзниками в производстве высококлассных вин были, безусловно, старые виноградные лозы Гренаш (Гарнача) и Кариньян, а также посадки международных сортов Каберне Совиньон и Сира. И вот в 1989 году на какой-то заброшенной птицеферме неподалеку от деревни Граталлопс влюбленные в свое дело энтузиасты произвели первое вино. </p>
+
+          <img src="img/article/img-4.png" alt="">
+
+          <blockquote>
+            Рене Барбье / © Google images
+          </blockquote>
+
+          <p>Но успех вина – это не только лозы и технологии. Это еще и классные продавцы. И таковым был англичанин Кристофер Каннан со своей экспортно-ориентированной компанией Europvin. Он тоже поверил в потенциал региона, когда еще в 1983-м попробовал винтажный Приорат 1974 года от винодельни Scala Dei и так восхитился им, что начал продавать это вино в самые разные страны, в том числе, в США и Японию. Ну, а дальше все так закрутилось, что вскоре на выставке New York Wine Experience. Кристофер знакомится с другими виноделами Приората, в том числе и с Рене Барбье, который выпускал вино под брендом Кло Могадор. </p>
+
+          <p>Поначалу к винам Рене виноторговец отнесся весьма скептически: продукт, как говорится, малоизвестный, а цена высокая. Тем не менее буквально через два года Кристофер решается показать вина Рене Барбье не кому-нибудь, а самому Роберту Паркеру. Произошло это на ежегодной дегустации в бордосском офисе Europvin. Результат не заставил себя долго ждать: в следующем выпуске The Wine Advocate  винный гуру Роберт Паркер поставил винам Приорат исключительно высокие оценки. Это был триумф: виноторговцы реально обратили внимание на то, что происходит в Богом забытом отдаленном уголке Каталонии.</p>
+        </div>
+
+        <div class="text__text-img">
+          <div class="text-img__text">
+            <h3>Denominacion de Origen Calificada</h3>
+
+            <p>Сегодня этот регион считается национальной гордостью Испании и пользуется желанным названием «Denominacion de Origen Calificada», которое в Испании он делит только с Риохой. Энологи находят в винах Приората более 50 нюансов: сливы и черной вишни, сухофруктов и смородины, мокрого камня и соли, мятыи корицы, кардамона и аниса и т.д. – настоящая «адская смесь»!</p>
+          </div>
+          <div class="text-img__img">
+            <img src="img/article/logo-1.png" alt="">
+          </div>
+        </div>
+
+        <div class="text__regular">
+          <p>А вот вторая, можно сказать,  «волна возвышения» Приората произошла в 1997 году, когда Кристофер Каннан  по совету своего друга Рене Барбье приобрел 10 га заброшенных террас. Уже через три года площадь виноградников увеличилась до 17 га.</p>
+
+          <p>Хозяйство располагается на севере Граталлопс, на террасных склонах из чистого сланца,где и получаются  лучшие вина Приората. С высоких террас открываются захватывающие виды на скалистую горную цепь Монтсант,  долину реки Эбро и горы провинции Нижний Арагон. На виноградниках произрастает около 2500 старых 60-летних лоз Кариньяна и Гренаша (Гарнача), из которых создается престижное вино хозяйства Clos Figueres. Остальные лозы – Гренаш, Сира, Каберне Совиньон и Мурведр – были  посажены в 1998 и 2001 годах. Рене Барбье контролирует процессы винификации и выдержки вин. Состав брендов определяют Кристофер Каннан вместе с Рене Барбье и энологом  Фернандо Замора. Экологическая обработка виноградников проводится без применения ирригации.</p>
+
+          <p>Да она тут и не нужна: лозы на здешних холодных влажных почвах такие «трудолюбивые», что в поисках воды залезают во все трещинки, прокладывая туннели. Вот на таких уникальных почвах дочь Кристофера Каннан начала создавать вино, которое, сохраняя все особенности терруара, можно пить довольно молодым.</p>
+        </div>
+
+        <div class="text__link-block">
+          <h3>Серрас дель Приорат красное (Serras del Priorat Red)</h3>
+
+          <div class="text-link-block__img">
+            <img src="img/article/wine-1.png" alt="">
+            <a class="text-link-block__link" href="product-page-2.html">смотреть в каталоге</a>
+
+            <a href="product-card-2.html" class="i-news-section__slide">
+              <div class="i-news-slide__content">
+                <div class="i-news-slide__img">
+                  <img src="img/article/wine-1.png" alt="">
+                </div>
+
+                <div class="i-news-slide__text-box">
+                  <p class="i-news-slide__name">Serras del Priorat Red</p>
+
+                  <div class="i-news-slide__description-block">
+                    <div class="i-news-slide__line"></div>
+
+                    <small class="i-news-slide__country">Франция</small>
+
+                    <p class="i-news-slide__wine-type">Красное, сухое, 0.75</p>
+                  </div>
+                </div>
+
+                <div class="a-slide__link">смотреть в каталоге</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="text__regular">
+          <p>Обладает той элегантностью, которая свойственна винам с минеральным характером. В составе 51% Гренаш, 31% Кариньян, 18% Сира и 6% Каберне Совиньон.Селекция ягод (только ручной сбор!) проходит на специальных столах.  Брожение в 2500 л чанах из нержавеющей стали,  ежедневный пижаж,  мацерация в течение 2-х недель и далее 7-месячная выдержка в двухлетних 500-литровых бочках из французского дуба и частично из нержавеющей стали. Чтобы сохранить вкус и аромат натуральных фруктов, розлив производится через год. Потенциал хранения вина в бутылке – 8-10 лет. Наверное, темнокожий Кариньян и устойчивый Гренаш (Гарнача) придают Серрас дель Приорат почти черный цвет с фантастическим синеватым отливом. В букете ароматы красных фруктов, а также нотки минералов с оттенками цветов, ванили и трав Средиземноморья, с флюидами лаванды и розмарина. Такое полнотелое «черное» вино подходит практически к любым мясным и овощным блюдам и даже рыбе-гриль.</p>
+        </div>
+
+        <div class="text__link-block">
+          <h3>Серрас дель Приорат красное (Serras del Priorat Red)</h3>
+
+          <div class="text-link-block__img">
+            <img src="img/article/wine-2.png" alt="">
+            <a class="text-link-block__link" href="product-page-2.html">смотреть в каталоге</a>
+
+            <a href="product-card-2.html" class="i-news-section__slide">
+              <div class="i-news-slide__content">
+                <div class="i-news-slide__img">
+                  <img src="img/article/wine-2.png" alt="">
+                </div>
+
+                <div class="i-news-slide__text-box">
+                  <p class="i-news-slide__name">Serras del Priorat White</p>
+
+                  <div class="i-news-slide__description-block">
+                    <div class="i-news-slide__line"></div>
+
+                    <small class="i-news-slide__country">Франция</small>
+
+                    <p class="i-news-slide__wine-type">Красное, сухое, 0.75</p>
+                  </div>
+                </div>
+
+                <div class="a-slide__link">смотреть в каталоге</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="text__regular">
+          <p>
+            Aбсолютно уникальное  молодое вино (2018 год – первый винтаж), поскольку  пока белый Гренаш, из которого на 100% состоит  это вино, занимает лишь 5% от общего производства. Но это – пока, поскольку спрос растет, и потому виноград сорта Гарнача Бланка высаживают здесь все больше и больше.
+          </p>
+
+          <p>
+            Ручной сбор в начале сентября. Перед розливом ферментация и выдержка в течение примерно 6 месяцев в чанах из нержавеющей стали (без выдержки в дубе).
+            Считается, что Гарнача бланка – светлокожая мутация сорта Гренаш нуар, который чаще используется в блендах. Но здесь  Гарнача бланка без каких-либо «соседей», выказывая свою восхитительную свежесть и вкус летних фруктов. Как аперитив белый Приорат – это то, что нужно, но точно также вино подходит к рыбным блюдам и птице.
+          </p>
+
+          <p>
+            Дизайн этикетки, утонченный и аскетичный, взывает к тому, чтобы мы обратили внимание на симпатичную и мирную божью коровку – красную и желтую, напоминающую черепашку с пятнышками.  Вообще-то божья коровка считается древнейшим символом удачи, счастья и доброты – всего того, что приносят нам эти благодатные свежие вина, которые уберут от нас все печали и в любое время года унесут в заоблачные дали невероятных запахов лета и жаркого солнца.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="a-tag-section">
+        <div class="i-blog-section__nav-list">
+          <span class="i-blog-nav-list__nav">#вино</span>
+          <span class="i-blog-nav-list__nav">#испания</span>
+          <span class="i-blog-nav-list__nav">#приорат</span>
+        </div>
+
+        <div class="c-pc-nav-section__share-block">
+          <span class="paragraph-small">Поделиться</span>
+          <a href="https://www.instagram.com/" target="_blank" class="c-pc-nav-section__share-box">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.57143 0H11.4286C13.9533 0 16 2.0467 16 4.57143V11.4286C16 13.9533 13.9533 16 11.4286 16H4.57143C2.0467 16 0 13.9533 0 11.4286V4.57143C0 2.0467 2.0467 0 4.57143 0ZM4.57143 1.52381H11.4286C13.1117 1.52381 14.4762 2.88827 14.4762 4.57143V11.4286C14.4762 13.1117 13.1117 14.4762 11.4286 14.4762H4.57143C2.88827 14.4762 1.52381 13.1117 1.52381 11.4286V4.57143C1.52381 2.88827 2.88827 1.52381 4.57143 1.52381ZM12.1905 8C12.1905 5.68566 10.3143 3.80952 8 3.80952C5.71907 3.88825 3.88825 5.71907 3.80952 8C3.80952 10.3143 5.68566 12.1905 8 12.1905C10.3143 12.1905 12.1905 10.3143 12.1905 8ZM8.06104 5.33333C8.75238 5.33293 9.41555 5.60728 9.90454 6.09599C10.3935 6.5847 10.6683 7.24771 10.6683 7.93905C10.6263 9.42081 9.4339 10.6116 7.95209 10.6514C7.26081 10.6518 6.59773 10.3775 6.10885 9.88873C5.61998 9.39999 5.34541 8.73699 5.34561 8.04572C5.3879 6.5644 6.57968 5.37396 8.06104 5.33333ZM12.9524 3.80952C12.9524 3.38874 12.6113 3.04762 12.1905 3.04762C11.7697 3.04762 11.4286 3.38874 11.4286 3.80952C11.4286 4.23031 11.7697 4.57143 12.1905 4.57143C12.6113 4.57143 12.9524 4.23031 12.9524 3.80952Z" fill="#242E45"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="c-pc-nav-section__share-box">
+            <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.22222 8H4.44444V16H1.77778V8H0V5.33333H1.77778V3.55556C1.77778 2.24889 1.51822 0 4.44444 0H7.11111V2.66667H5.33333C4.84754 2.67883 4.45661 3.06976 4.44444 3.55556V5.33333H7.11111L6.22222 8Z" fill="#242E45"/>
+            </svg>
+          </a>
+          <a href="https://vk.com/" target="_blank" class="c-pc-nav-section__share-box">
+            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.3722 0.366966H12.7758C12.6698 0.366966 12.5658 0.393402 12.4749 0.44346C12.3839 0.493519 12.3094 0.565327 12.2593 0.651243C12.2593 0.651243 11.2238 2.40596 10.8912 2.99698C9.99633 4.58691 9.41686 4.08777 9.41686 3.34988V0.8056C9.41686 0.592992 9.32506 0.389092 9.16167 0.238756C8.99828 0.0884191 8.77667 0.00396092 8.5456 0.00396092H6.59346C6.32762 -0.0142259 6.06113 0.0304221 5.81931 0.133664C5.57749 0.236907 5.36837 0.395315 5.21182 0.593845C5.21182 0.593845 6.20308 0.446378 6.20308 1.6753C6.20308 1.98003 6.22014 2.85668 6.23569 3.59197C6.23862 3.70032 6.20535 3.80689 6.14036 3.89729C6.07537 3.98769 5.98181 4.05757 5.87229 4.09749C5.76277 4.13741 5.64258 4.14545 5.52794 4.12052C5.41329 4.09559 5.30973 4.0389 5.23121 3.9581C4.43218 2.93558 3.7703 1.82799 3.25998 0.659404C3.21616 0.571987 3.146 0.497971 3.05783 0.446137C2.96966 0.394303 2.86718 0.366826 2.76255 0.366966C2.19948 0.366966 1.07272 0.366966 0.40357 0.366966C0.338683 0.36656 0.274658 0.380654 0.216997 0.408037C0.159335 0.435421 0.109761 0.475274 0.0725324 0.524175C0.0353042 0.573076 0.0115351 0.629561 0.0032672 0.688779C-0.00500069 0.747997 0.00247979 0.808176 0.025066 0.864146C0.741367 2.67196 3.82696 8.35309 7.34886 8.35309H8.83123C8.98655 8.35309 9.1355 8.29632 9.24533 8.19526C9.35516 8.09421 9.41686 7.95716 9.41686 7.81425V6.99067C9.41686 6.88735 9.44971 6.7863 9.51136 6.69995C9.57302 6.6136 9.66079 6.54573 9.76385 6.50471C9.86691 6.4637 9.98076 6.45131 10.0914 6.4691C10.202 6.48688 10.3045 6.53405 10.3864 6.6048L12.1606 8.13864C12.32 8.27639 12.5304 8.35308 12.7491 8.35309H15.079C16.2027 8.35309 16.2027 7.63562 15.5901 7.08044C15.1589 6.68972 13.603 5.18073 13.603 5.18073C13.4697 5.05373 13.3902 4.88706 13.3789 4.71084C13.3676 4.53463 13.4251 4.36049 13.5411 4.21991C14.044 3.61096 14.8666 2.61415 15.2155 2.18713C15.6924 1.60346 16.5554 0.366966 15.3722 0.366966Z" fill="#242E45"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="a-slider">
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-1.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">21 августа, 2020</span>
+
+            <h5>Российские вина стремительно покоряют заграницу</h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav active">#вино</span>
+              <span class="i-blog-nav-block__nav">#события</span>
+              <span class="i-blog-nav-block__nav">#италия</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-2.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">15 августа, 2020</span>
+
+            <h5>Секреты идеального подбора винограда</h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav">#виноград</span>
+              <span class="i-blog-nav-block__nav">#секреты</span>
+              <span class="i-blog-nav-block__nav active">#вино</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-3.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">23 июля, 2020</span>
+
+            <h5>Путешествуем по винным <br>странам. Франция <div> <img src="img/main/flag-1.svg" alt=""></div> </h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav">#страны</span>
+              <span class="i-blog-nav-block__nav">#путешествия</span>
+              <span class="i-blog-nav-block__nav">#франция</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-1.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">21 августа, 2020</span>
+
+            <h5>Российские вина стремительно покоряют заграницу</h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav active">#вино</span>
+              <span class="i-blog-nav-block__nav">#события</span>
+              <span class="i-blog-nav-block__nav">#италия</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-2.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">15 августа, 2020</span>
+
+            <h5>Секреты идеального подбора винограда</h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav">#виноград</span>
+              <span class="i-blog-nav-block__nav">#секреты</span>
+              <span class="i-blog-nav-block__nav active">#вино</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-3.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">23 июля, 2020</span>
+
+            <h5>Путешествуем по винным <br>странам. Франция <div> <img src="img/main/flag-1.svg" alt=""></div> </h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav">#страны</span>
+              <span class="i-blog-nav-block__nav">#путешествия</span>
+              <span class="i-blog-nav-block__nav">#франция</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-1.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">21 августа, 2020</span>
+
+            <h5>Российские вина стремительно покоряют заграницу</h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav active">#вино</span>
+              <span class="i-blog-nav-block__nav">#события</span>
+              <span class="i-blog-nav-block__nav">#италия</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-2.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">15 августа, 2020</span>
+
+            <h5>Секреты идеального подбора винограда</h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav">#виноград</span>
+              <span class="i-blog-nav-block__nav">#секреты</span>
+              <span class="i-blog-nav-block__nav active">#вино</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+        <a href="article.html" class="i-blog-block__blog">
+          <div class="i-blog__img">
+            <img src="img/main/blog-img-3.png" alt="">
+          </div>
+
+          <div class="i-blog__text-block">
+            <span class="paragraph-small">23 июля, 2020</span>
+
+            <h5>Путешествуем по винным <br>странам. Франция <div> <img src="img/main/flag-1.svg" alt=""></div> </h5>
+
+            <div class="i-blog__nav-block">
+              <span class="i-blog-nav-block__nav">#страны</span>
+              <span class="i-blog-nav-block__nav">#путешествия</span>
+              <span class="i-blog-nav-block__nav">#франция</span>
+            </div>
+
+            <p class="paragraph-small">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+          </div>
+        </a>
+      </section>
+
+    </main>
+
+    <section class="footer-section">
+      <section class="pre-footer-section">
+        <div class="container">
+          <div class="pre-footer-section__text-block">
+            <h4 class="h4">Идеальное партнёрство</h4>
+
+            <p class="paragraph-small">Мы выстраиваем долгосрочные отношения с виноделами и каждого из них знаем лично. Мы работаем только с теми, чье мировоззрение нам близко.</p>
+
+            <a href="partner.html" class="button-big">Стать партнёром</a>
+          </div>
+        </div>
+        <script>
+          var mapCoords = [55.673905, 37.440308];
+          var mapCoordsCenter = [55.673905, 37.440308];
+          var mapIcon = 'img/map-icon.svg';
+        </script>
+        <div class="pre-footer-section__map" id="map">
+          <!-- Сюда будет генерироваться картка -->
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top-block">
+            <div class="footer__logo-block">
+              <a href="index.html" class="footer__logo">
+                <svg width="74" height="36" viewBox="0 0 74 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M30.2169 0H31.6521C33.3385 0.132632 35.0935 0.594474 36.3535 1.78342C37.7035 3.02447 38.2956 4.89316 38.305 6.69079C38.3192 9.82895 38.305 12.9671 38.3098 16.1053C38.3429 18.2534 38.3358 20.5697 37.1279 22.4432C36.0906 24.1271 34.1153 24.9584 32.2111 25.1289C30.0227 25.3279 27.5974 25.1266 25.8211 23.7032C24.0661 22.2939 23.5048 19.9232 23.4953 17.7703C23.4906 14.0518 23.4858 10.3311 23.4977 6.61263C23.5095 4.83395 24.1182 2.98895 25.4635 1.77158C26.7471 0.587368 28.514 0.127895 30.2169 0ZM29.9445 4.66816C29.3145 4.98316 28.9924 5.69842 29.0042 6.38289C28.9971 10.485 28.9948 14.5895 29.0066 18.6916C28.964 19.7076 29.7408 20.7332 30.8066 20.7521C31.9292 20.8374 32.8482 19.7739 32.7937 18.6892C32.8174 14.7505 32.7914 10.8118 32.8056 6.87079C32.8008 6.34263 32.8103 5.77421 32.519 5.30763C32.0145 4.44789 30.7971 4.20868 29.9445 4.66816Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M65.6662 0H66.642C68.4065 0.101842 70.2538 0.589737 71.5541 1.85684C72.717 2.96526 73.2736 4.56158 73.4204 6.13421V18.4168C73.283 20.2074 72.8141 22.1068 71.4736 23.3929C70.0596 24.7761 67.992 25.1929 66.0783 25.1953C64.0983 25.2118 61.9549 24.7737 60.5125 23.3195C59.0796 21.8676 58.6273 19.7432 58.6178 17.7655C58.6178 14.0542 58.6154 10.3429 58.6201 6.63158C58.6225 4.86474 59.2217 3.02921 60.5457 1.80711C61.9146 0.530526 63.8354 0.0544737 65.6662 0ZM65.3938 4.53553C64.5815 4.74632 64.0841 5.58947 64.1267 6.40184C64.1244 10.5063 64.1196 14.6108 64.1291 18.7153C64.0794 19.7811 64.9699 20.8255 66.0736 20.7521C67.1299 20.7474 67.9399 19.7432 67.9091 18.7247C67.9209 14.6961 67.9067 10.665 67.9162 6.63395C67.9209 6.18158 67.883 5.70789 67.6415 5.31237C67.2033 4.55684 66.1991 4.27026 65.3938 4.53553Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M0 0.475174C2.55553 0.475174 5.10868 0.472805 7.66421 0.475174C8.23263 3.60623 8.80342 6.73728 9.37658 9.86833C9.88342 12.5423 9.94974 15.2731 10.305 17.966C10.6437 15.0196 10.7645 12.0425 11.3424 9.12702C11.8682 6.24465 12.3939 3.35991 12.9174 0.477542C15.4753 0.472805 18.0332 0.475174 20.5911 0.475174C20.5934 8.50649 20.5911 16.5402 20.5911 24.5739C18.8384 24.5739 17.0882 24.5739 15.3355 24.5739C15.2905 18.2336 15.3663 11.8933 15.5653 5.55781C14.5374 11.9099 13.3082 18.2312 12.2068 24.5715C10.9303 24.5762 9.65368 24.5739 8.3771 24.5715C7.34684 18.8257 6.31658 13.0799 5.28395 7.33412C5.18684 6.75623 5.12526 6.17123 5.05421 5.59096C4.98079 7.10202 5.10395 8.6107 5.1371 10.1218C5.29579 14.9368 5.24842 19.7565 5.25553 24.5739C3.50289 24.5739 1.75263 24.5739 0 24.5739V0.475174Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M41.2419 0.476851C44.2356 0.481588 47.2292 0.462641 50.2229 0.486325C52.0703 0.517114 53.9887 1.35317 54.974 2.9708C56.1132 4.8158 56.0327 7.12501 55.6561 9.1808C55.379 10.7345 54.254 12.0253 52.8211 12.6434C54.3274 13.0792 55.4429 14.4553 55.5827 16.0161C55.7437 18.079 55.5613 20.1537 55.6821 22.219C55.7224 22.8655 55.9285 23.6353 56.6295 23.8461C56.6319 24.0284 56.6342 24.3932 56.6366 24.5755C54.9006 24.5495 53.1598 24.6276 51.4237 24.5376C50.564 24.4026 50.2585 23.4482 50.1992 22.6974C50.0429 20.7766 50.2135 18.844 50.1045 16.9232C50.0666 16.3216 49.8037 15.6726 49.2211 15.4121C48.4442 15.0734 47.5703 15.2061 46.7485 15.1753C46.7485 18.3087 46.7485 21.4421 46.7485 24.5755C44.9106 24.5755 43.075 24.5755 41.2395 24.5755C41.2419 16.5419 41.2371 8.50817 41.2419 0.476851ZM46.7461 10.8363C47.6271 10.7961 48.6171 11.0092 49.3963 10.4858C50.1756 9.93396 50.3603 8.90369 50.3887 8.0108C50.4006 7.0729 50.2916 6.00475 49.5716 5.32501C48.809 4.62159 47.6911 4.85843 46.7485 4.81343C46.7437 6.82185 46.7508 8.8279 46.7461 10.8363Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M12.444 27.3553C13.1711 26.723 14.2937 27.0569 14.7461 27.8551C14.7366 27.6396 14.7295 27.424 14.7224 27.2085C15.2908 27.2061 15.8616 27.2061 16.4301 27.2085C16.4064 29.5864 16.4845 31.969 16.3945 34.3446C16.3566 35.2943 15.4898 35.948 14.5874 36.0001H13.7537C12.6785 35.9859 11.7808 35.1522 11.8258 34.0485C12.4156 34.0461 13.0029 34.0461 13.5927 34.0438C13.6258 34.1811 13.6945 34.4582 13.7277 34.598C14.0214 34.6311 14.5922 34.7898 14.6182 34.3232C14.6774 33.8614 14.6585 33.3948 14.6751 32.9306C14.1043 33.5038 13.1308 33.8472 12.4416 33.2693C11.6127 32.5232 11.9135 31.2964 11.8543 30.3111C11.9253 29.3282 11.5795 28.0848 12.444 27.3553ZM13.7774 28.7006C13.4695 29.5817 13.6566 30.5764 13.6424 31.5001C13.5264 32.104 14.5116 32.329 14.6158 31.7203C14.6845 30.7896 14.6822 29.8446 14.6158 28.9138C14.5708 28.5324 14.0095 28.3974 13.7774 28.7006Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M25.2734 28.0873C25.5576 27.5401 25.9816 27.0191 26.6495 26.9812C26.6613 27.668 26.6613 28.3549 26.6637 29.0417C26.1497 29.082 25.4984 29.2501 25.4392 29.8636C25.3208 31.1638 25.4179 32.4736 25.3871 33.7786C24.7997 33.7809 24.2124 33.7809 23.625 33.7786C23.625 31.5878 23.625 29.3994 23.625 27.2086C24.1792 27.2062 24.7311 27.2062 25.2853 27.2062C25.2829 27.4265 25.2758 27.867 25.2734 28.0873Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M34.6951 27.1799C35.6449 26.8886 36.9096 26.9336 37.542 27.8099C38.1625 28.7549 37.9399 29.9462 37.9872 31.012C38.0086 31.9736 37.9138 33.1791 36.957 33.6883C35.9741 34.1336 34.5578 34.0981 33.8591 33.1696C33.1722 32.1157 33.473 30.7846 33.4115 29.6028C33.3712 28.6578 33.6933 27.4996 34.6951 27.1799ZM35.3157 28.6365C35.0646 29.3209 35.2351 30.0765 35.1854 30.7941C35.2233 31.3199 35.0717 31.9073 35.3441 32.3881C35.6496 32.7267 36.2322 32.4473 36.1896 32.0067C36.2109 30.967 36.2417 29.9225 36.173 28.8828C36.1517 28.4636 35.5762 28.3594 35.3157 28.6365Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M58.3173 27.9163C58.7104 27.4332 59.2315 26.9192 59.9183 27.0282C60.7236 27.0827 61.2233 27.8879 61.2683 28.6316C61.3275 29.8324 61.3015 31.0356 61.2873 32.2387C61.2968 33.1056 60.6075 34.0174 59.6791 33.9582C59.1794 33.9629 58.8383 33.5627 58.502 33.2548C58.5233 34.169 58.5115 35.0856 58.5139 35.9998H56.7375C56.7375 33.0677 56.7375 30.1379 56.7375 27.2082C57.2728 27.2058 57.8081 27.2082 58.3433 27.2082C58.3362 27.3858 58.3244 27.7387 58.3173 27.9163ZM58.6252 28.7548C58.3931 29.6453 58.5636 30.595 58.5139 31.5092C58.5139 31.8456 58.4925 32.4424 58.9662 32.4613C59.3878 32.5703 59.5536 32.0563 59.5252 31.7342C59.5252 30.7916 59.5962 29.8371 59.4731 28.9016C59.3997 28.4966 58.8336 28.4161 58.6252 28.7548Z"
+                    fill="#FFFFFF" />
+                  <path
+                    d="M45.0924 32.848C45.064 30.9628 45.0497 29.0728 45.1019 27.1875C45.6845 27.2112 46.2671 27.2112 46.8497 27.2088C46.864 28.8028 46.8284 30.3991 46.8663 31.9954C46.7929 32.5259 47.6811 32.6586 47.7474 32.128C47.8303 30.4914 47.7569 28.8478 47.7829 27.2088C48.3703 27.2064 48.9576 27.2064 49.545 27.2088C49.545 29.3972 49.5426 31.588 49.545 33.7788C48.9884 33.7812 48.4342 33.7812 47.88 33.7788C47.8871 33.5917 47.9013 33.2199 47.9061 33.0328C47.4987 34.3117 45.1634 34.3022 45.0924 32.848Z"
+                    fill="#FFFFFF" />
+                </svg>
+              </a>
+
+              <div class="footer__social-box">
+                <a href="https://www.instagram.com/" target="_blank" class="footer__insta-logo">
+                  <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19.3664 9.29199C13.9004 9.29199 9.37134 13.7429 9.37134 19.2871C9.37134 24.8313 13.8223 29.2822 19.3664 29.2822C24.9106 29.2822 29.3616 24.7532 29.3616 19.2871C29.3616 13.821 24.8325 9.29199 19.3664 9.29199ZM19.3664 25.6902C15.8525 25.6902 12.9633 22.801 12.9633 19.2871C12.9633 15.7732 15.8525 12.884 19.3664 12.884C22.8804 12.884 25.7696 15.7732 25.7696 19.2871C25.7696 22.801 22.8804 25.6902 19.3664 25.6902Z"
+                      fill="#E5D7C3" />
+                    <path d="M29.7513 11.3222C31.002 11.3222 32.0159 10.3084 32.0159 9.05773C32.0159 7.80707 31.002 6.79321 29.7513 6.79321C28.5007 6.79321 27.4868 7.80707 27.4868 9.05773C27.4868 10.3084 28.5007 11.3222 29.7513 11.3222Z"
+                      fill="#E5D7C3" />
+                    <path
+                      d="M35.6076 3.20156C33.5773 1.09321 30.6881 0 27.4085 0H11.3226C4.52903 0 0 4.52903 0 11.3226V27.3304C0 30.6881 1.09321 33.5773 3.27964 35.6857C5.38799 37.7159 8.19911 38.731 11.4007 38.731H27.3304C30.6881 38.731 33.4992 37.6378 35.5295 35.6857C37.6378 33.6554 38.731 30.7662 38.731 27.4085V11.3226C38.731 8.04294 37.6378 5.23181 35.6076 3.20156ZM35.2952 27.4085C35.2952 29.8291 34.4363 31.7813 33.0307 33.1088C31.6251 34.4363 29.673 35.139 27.3304 35.139H11.4007C9.05807 35.139 7.1059 34.4363 5.70033 33.1088C4.29477 31.7032 3.59199 29.7511 3.59199 27.3304V11.3226C3.59199 8.97998 4.29477 7.02781 5.70033 5.62225C7.02781 4.29477 9.05807 3.59199 11.4007 3.59199H27.4865C29.8291 3.59199 31.7813 4.29477 33.1869 5.70033C34.5144 7.1059 35.2952 9.05806 35.2952 11.3226V27.4085Z"
+                      fill="#E5D7C3" />
+                  </svg>
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank" class="footer__facebook-logo">
+                  <svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 9.00049H5V18.0005H2V9.00049H0V6.00049H2V4.00049C2 2.53049 1.708 0.000488281 5 0.000488281H8V3.00049H6C5.45348 3.01417 5.01368 3.45397 5 4.00049V6.00049H8L7 9.00049Z" fill="#E5D7C3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__nav-block">
+              <nav class="footer__nav-list">
+                <a href="about.html" class="footer__nav">о компании</a>
+                <a href="catalog.html" class="footer__nav">Aссортимент</a>
+                <a href="maker.html" class="footer__nav">Производители</a>
+                <a href="partner.html" class="footer__nav">партнёрам</a>
+              </nav>
+
+              <nav class="footer__nav-list">
+                <a href="news.html" class="footer__nav">новости</a>
+                <a href="blog.html" class="footer__nav">блог</a>
+                <a href="contact.html" class="footer__nav">Контакты</a>
+
+                <div class="footer__mob-social-box">
+                  <a href="https://www.instagram.com/" target="_blank" class="footer__insta-logo">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.3664 9.29199C13.9004 9.29199 9.37134 13.7429 9.37134 19.2871C9.37134 24.8313 13.8223 29.2822 19.3664 29.2822C24.9106 29.2822 29.3616 24.7532 29.3616 19.2871C29.3616 13.821 24.8325 9.29199 19.3664 9.29199ZM19.3664 25.6902C15.8525 25.6902 12.9633 22.801 12.9633 19.2871C12.9633 15.7732 15.8525 12.884 19.3664 12.884C22.8804 12.884 25.7696 15.7732 25.7696 19.2871C25.7696 22.801 22.8804 25.6902 19.3664 25.6902Z"
+                        fill="#E5D7C3" />
+                      <path d="M29.7513 11.3222C31.002 11.3222 32.0159 10.3084 32.0159 9.05773C32.0159 7.80707 31.002 6.79321 29.7513 6.79321C28.5007 6.79321 27.4868 7.80707 27.4868 9.05773C27.4868 10.3084 28.5007 11.3222 29.7513 11.3222Z"
+                        fill="#E5D7C3" />
+                      <path
+                        d="M35.6076 3.20156C33.5773 1.09321 30.6881 0 27.4085 0H11.3226C4.52903 0 0 4.52903 0 11.3226V27.3304C0 30.6881 1.09321 33.5773 3.27964 35.6857C5.38799 37.7159 8.19911 38.731 11.4007 38.731H27.3304C30.6881 38.731 33.4992 37.6378 35.5295 35.6857C37.6378 33.6554 38.731 30.7662 38.731 27.4085V11.3226C38.731 8.04294 37.6378 5.23181 35.6076 3.20156ZM35.2952 27.4085C35.2952 29.8291 34.4363 31.7813 33.0307 33.1088C31.6251 34.4363 29.673 35.139 27.3304 35.139H11.4007C9.05807 35.139 7.1059 34.4363 5.70033 33.1088C4.29477 31.7032 3.59199 29.7511 3.59199 27.3304V11.3226C3.59199 8.97998 4.29477 7.02781 5.70033 5.62225C7.02781 4.29477 9.05807 3.59199 11.4007 3.59199H27.4865C29.8291 3.59199 31.7813 4.29477 33.1869 5.70033C34.5144 7.1059 35.2952 9.05806 35.2952 11.3226V27.4085Z"
+                        fill="#E5D7C3" />
+                    </svg>
+                  </a>
+
+                  <a href="https://www.facebook.com/" target="_blank" class="footer__facebook-logo">
+                    <svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 9.00049H5V18.0005H2V9.00049H0V6.00049H2V4.00049C2 2.53049 1.708 0.000488281 5 0.000488281H8V3.00049H6C5.45348 3.01417 5.01368 3.45397 5 4.00049V6.00049H8L7 9.00049Z" fill="#E5D7C3" />
+                    </svg>
+                  </a>
+                </div>
+              </nav>
+            </div>
+
+            <div class="footer__contact-block">
+              <p class="footer-contact-block__header">КОНТАКТЫ</p>
+
+              <a href="tel:+84953089710" target="_blank" class="footer__tel">8 (495) 308-97-10</a>
+
+              <a href="mailto:info@morotrade.ru" target="_blank" class="footer__email">info@morotrade.ru</a>
+
+              <div class="footer__btn button-small callback">СВЯЗАТЬСЯ С НАМИ</div>
+            </div>
+          </div>
+
+          <div class="footer__bot-block">
+            <div class="footer-bot__left-block">
+              <p>© 2020 МоРо групп.<span> Все права защищенны</span></p>
+              <a href="#">Политика конфиденциальности</a>
+            </div>
+
+            <div class="footer-bot__right-block">
+              <span>Made by</span>
+              <a href="#">
+                <img src="img/main/footer-logo.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.inputmask.js"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
