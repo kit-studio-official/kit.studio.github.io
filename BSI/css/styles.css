@@ -715,6 +715,35 @@ svg circle {
   margin-bottom: 0;
 }
 
+.item-left__list li p,
+.item-left__list li p a {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  mix-blend-mode: inherit;
+}
+
+.item-left__list li p a {
+  position: relative;
+}
+
+.item-left__list li p a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #161C2D;
+
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 .item-left__list li em {
   color: #A2A4AB;
   margin-left: 5px;
@@ -3291,6 +3320,14 @@ p.item-content__header-description {
   .tab:hover {
     color: #3CA9E8;
     opacity: 1;
+  }
+
+  .item-left__list li p a:hover {
+    color: #3CA9E8;
+  }
+
+  .item-left__list li p a:hover:before {
+    background-color: #3CA9E8;
   }
 
 
