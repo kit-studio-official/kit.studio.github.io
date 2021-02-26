@@ -92,6 +92,11 @@
     color: #161C2D;
   }
 
+  .mob-menu__nav a.active {
+    color: #3CA9E8;
+    pointer-events: none;
+  }
+
   .mob-menu__btn {
     margin-top: 43px;
   }
@@ -169,6 +174,10 @@
     max-width: none;
   }
 
+  .form-section__info br {
+    display: none;
+  }
+
   .form-section__info-img {
     margin-top: 2px;
   }
@@ -183,11 +192,15 @@
   }
 
   .find-out-section__link-blocks {
+    flex-direction: column;
+    width: 100%;
     max-width: 540px;
   }
 
-  .find-out-section__link:nth-child(2n+2) {
+  .find-out-section__link {
     margin-right: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
 
@@ -230,6 +243,241 @@
   .footer__design {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+
+  /* travel packages page */
+
+  .travel-packages .travels-section {
+    padding-bottom: 80px;
+  }
+
+  .travel-packages .travels__btns {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .item-content__hidden-list {
+    display: none;
+    width: 100%;
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 0;
+    border: none;
+    background: none;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    box-shadow: none;
+
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+
+  /* sightseeing section */
+
+  .sightseeing-section {
+    padding-bottom: 80px;
+  }
+
+  .sightseeing-section__header-block {
+    display: block;
+  }
+
+  .sightseeing-section__header-description {
+    margin-top: 15px;
+    max-width: none;
+  }
+
+  .sightseeing-section__header-description br {
+    display: none;
+  }
+
+  .sightseeing-block {
+    display: block;
+  }
+
+  .sightseeing-box {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0px 6px 20px rgba(14, 31, 53, 0.06);
+    height: auto;
+    min-height: 450px;
+  }
+
+  .sightseeing-box:last-child {
+    margin-bottom: 0;
+  }
+
+  .sightseeing-box__img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .sightseeing-box__img picture {
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .sightseeing-box__img img {
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .sightseeing-box__text {
+    margin-left: auto;
+    width: 50%;
+    padding: 28px 20px;
+  }
+
+  .sightseeing-box__text strong,
+  .sightseeing-box__text p {
+    color: #161c2d;
+  }
+
+  .sightseeing-box__text p {
+    opacity: 0.7;
+  }
+
+
+  /* your stay in Dubai page */
+
+  .stay-info-section {
+    padding-bottom: 18px;
+  }
+
+  .stay-info__double-block {
+    position: relative;
+  }
+
+  .stay-info__img-box.pc {
+    display: none;
+  }
+
+  .stay-info__img-box {
+    margin-top: 24px;
+
+    width: 100%;
+    max-width: none;
+  }
+
+  .stay-info__item {
+    width: 100vw;
+    overflow-x: scroll;
+    padding-left: 40px;
+    padding-bottom: 28px;
+
+    scrollbar-width: none;
+  }
+
+  .stay-info__item::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stay-info__item .item__right-block {
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  .stay-info__tab-block .items {
+    width: 100vw;
+    margin-left: -40px;
+  }
+
+  .stay-info__tab-block .item__right-block:after {
+    content: '';
+    display: block;
+    top: 0;
+    bottom: 0;
+    height: 5px;
+    min-width: 40px;
+  }
+
+  .stay-info__item .item-right__box {
+    box-shadow: 0px 6px 20px rgba(14, 31, 53, 0.06);
+    border: none;
+  }
+
+  .stay-info__bot-block {
+    margin-top: 52px;
+    flex-direction: column;
+  }
+
+  .stay-info__bot-block .item__right-block {
+    margin-top: 0;
+  }
+
+
+  /* wellbeing page */
+
+  .wellness-travel-section {
+    padding-bottom: 58px;
+  }
+
+  .wellness-travel-section .item__left-block {
+    max-width: none;
+  }
+
+  /* certification section */
+
+  .certification-block {
+    display: block;
+  }
+
+  .vaccine-box,
+  .certification-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .certification-block br {
+    display: none;
+  }
+
+  .certification-box {
+    margin-top: 40px;
+  }
+
+
+  /* for tour operators page */
+
+  .for-operators__content {
+    max-width: none;
+  }
+
+
+  /* contact us page */
+
+  .contact-us__content {
+    display: block;
+  }
+
+  .contact-us__text br {
+    display: none;
+  }
+
+  .contact-us__text,
+  .contact-us__form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact-us__form {
+    margin-top: 40px;
   }
 }
 
@@ -443,7 +691,7 @@
 
   .item__right-block.one {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     position: relative;
   }
@@ -826,6 +1074,7 @@
 
   .form-submit-box {
     flex-direction: column-reverse;
+    margin-top: 24px;
   }
 
   .form-submit-box input {
@@ -835,7 +1084,7 @@
 
   .form-checkbox {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
   }
 
   .form-checkbox-btn {
@@ -859,6 +1108,11 @@
 
   .form-checkbox label p br {
     display: none;
+  }
+
+  .form__dropdown-list {
+    padding: 12px 6px;
+    padding-top: 0;
   }
 
   /* find out section */
@@ -966,5 +1220,344 @@
 
   .thanks-modal-btn {
     width: 100%;
+  }
+
+  /* travel packages page */
+
+  .inside-header-section {
+    margin-top: 60px;
+    height: 268px;
+  }
+
+  .inside-header {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: -0.6px;
+    mix-blend-mode: normal;
+    white-space: normal;
+  }
+
+  .travel-packages .pc {
+    display: none;
+  }
+
+  .travel-packages .travels__btns-block {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .travel-packages .travels-section {
+    padding-bottom: 40px;
+  }
+
+  /* small info section */
+  
+  .small-info {
+    font-family: 'Euclid', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    text-align: left;
+  }
+
+
+  /* sightseeing section */
+
+  .sightseeing-section {
+    padding: 40px 0;
+  }
+
+  .sightseeing-section__header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
+
+  .sightseeing-section__header-description {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .sightseeing-block {
+    margin-top: 22px;
+  }
+
+  .sightseeing-box {
+    display: block;
+    min-height: auto;
+  }
+
+  .sightseeing-box__img,
+  .sightseeing-box__text {
+    position: relative;
+    width: 100%;
+  }
+
+  .sightseeing-box__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+  }
+
+  .sightseeing-box__img:before,
+  .sightseeing-box__img:after {
+    display: none;
+  }
+
+  .sightseeing-box__img picture {
+    width: 100%;
+    height: auto;
+  }
+
+  .sightseeing-box__img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sightseeing-box__text {
+    padding: 22px 21px;
+  }
+
+  .sightseeing-box__text br {
+    display: none;
+  }
+
+  .sightseeing-box__text strong {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .sightseeing-box__text p {
+    margin-top: 18px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  /* your stay in Dubai page */
+
+  .stay-info-section {
+    padding-top: 40px;
+    padding-bottom: 12px;
+  }
+
+  .stay-info__one-box {
+    margin-bottom: 28px;
+  }
+
+  .stay-info__one-box:first-child .item-left__header {
+    text-align: center;
+  }
+
+  .stay-info__double-block .stay-info__one-box .item-left__header {
+    text-align: left;
+  }
+
+  .stay-info__tab-block .items {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .stay-info__item .item-right__box {
+    margin-right: 15px;
+  }
+
+  .stay-info__tab-block .item__right-block:after {
+    min-width: 15px;
+  }
+
+  .stay-info__tab-block .items {
+    margin-top: 0;
+  }
+
+  .stay-info__item .item__right-block.one {
+    margin-top: 28px;
+  }
+
+  .stay-info__bot-block {
+    margin-top: 0;
+  }
+
+  .stay-info__bot-btn-box {
+    margin-top: 24px;
+  }
+
+  .stay-info__bot-btn {
+    height: 48px;
+    width: 100%;
+  }
+
+  .stay-info-section .item-left__header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
+
+  .after-tab .item-left__text {
+    margin-top: 14px;
+  }
+
+  .after-tab .item-left__header {
+    text-align: left !important;
+  }
+
+
+  /* wellbeing page */
+
+  .wellness-travel-section {
+    padding-top: 40px;
+    padding-bottom: 12px;
+  }
+
+  .wellbeing-page .how-works__header-box p {
+    margin-top: 12px;
+  }
+
+  .wellbeing-page .how-works__header-box {
+    margin-bottom: 40px;
+  }
+
+  .wellbeing-page .stay-info__one-box:first-child .item-left__header {
+    text-align: left;
+  }
+
+
+  /* healthcare section */
+
+  .healthcare-section {
+    padding-top: 40px;
+    padding-bottom: 12px;
+  }
+
+  .healthcare-section .item-left__header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
+
+  /* certification section */
+
+  .certification-section {
+    padding: 40px 0;
+  }
+
+  .vaccine-box__header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+  }
+
+  .vaccine-box__header-description {
+    margin-top: 22px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #161C2D;
+    opacity: 0.7;
+  }
+
+  .vaccine-box__info {
+    padding: 0 16px;
+  }
+
+  .vaccine-box__info p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .vaccine-box__info a:before {
+    bottom: 3px;
+  }
+
+  .certification-box {
+    margin-top: 28px;
+  }
+
+
+  /* for tour operators page */
+
+  .for-operators-section {
+    padding: 40px 0;
+  }
+
+  .for-operators-section br {
+    display: none;
+  }
+
+  .for-operators__header {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #161C2D;
+  }
+
+  .for-operators__header-description {
+    margin-top: 26px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .for-operators__email-text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .for-operators__email-text a:before {
+    bottom: 3px;
+  }
+
+
+  /* contact us page */
+
+  .contact-us__text strong {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #161C2D;
+  }
+
+  .contact-us__text p {
+    margin-top: 16px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .contact-us__text p a:before {
+    bottom: 3px;
+  }
+
+  .contact-us__form {
+    padding: 0;
+  }
+
+  .contact-us__form .modal-header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.1px;
+    text-align: left;
   }
 }

@@ -80,8 +80,9 @@ if ($(window).width() <= 1250) {
   $('.header__menu-btn-open').on('click', function () {
     blockBody();
     $('.mob-menu-block').addClass('active');
-    $(this).closest('.header__menu-open').addClass('active');
+    $(this).closest('.header__menu-open').  addClass('active');
     $('.header').addClass('light');
+    $('.header').removeClass('fill');
   });
 
   $('.header__menu-btn-close').on('click', function () {
@@ -122,20 +123,38 @@ $(window).scroll(function () {
   var scroll = $(this).scrollTop();
   var scrollNumber;
 
-  if ($(window).width() > 750) {
-    scrollNumber = 300;
-  } else {
-    scrollNumber = 150;
+  if ($('.header').hasClass('light')) {
+
+    return;
+
   }
 
-  var howItWorksScrollTop = $('.how-it-works-section').offset().top - scrollNumber;
+  if ($('.how-it-works-section').length) {
+    if ($(window).width() > 750) {
+      scrollNumber = 300;
+    } else {
+      scrollNumber = 150;
+    }
 
-  if (scroll > howItWorksScrollTop) {
-    $('.header').addClass('fill');
-  } else {
-    $('.header').removeClass('fill');
+    var howItWorksScrollTop = $('.how-it-works-section').offset().top - scrollNumber;
+
+    if (scroll > howItWorksScrollTop) {
+      $('.header').addClass('fill');
+    } else {
+      $('.header').removeClass('fill');
+    }
   }
 
+  if ($('.inside-header-section').length) {
+    var headerOffset = $('.inside-header-section').offset().top;
+    var headerOffsetBot = headerOffset + $('.inside-header-section').height();
+
+    if (scroll > (headerOffsetBot - 75)) {
+      $('.header').addClass('fill');
+    } else {
+      $('.header').removeClass('fill');
+    }
+  }
 });
 
 
@@ -446,6 +465,41 @@ function animation(scrollTop) {
   });
 
 }
+
+// hidden menu in tabs descriptions
+
+if ($('.item-content__hidden-list').length) {
+  if ($(window).width() > 1250) {
+
+    $('.item-content__list-more-bth').on('mouseover', function () {
+      $(this).closest('li').find('.item-content__hidden-list').addClass('active');
+    })
+
+    $('.item-content__list-more-bth').on('mouseout', function () {
+      $(this).closest('li').find('.item-content__hidden-list').removeClass('active');
+    })
+
+  } else {
+
+    $('.item-content__list-more-bth').on('click', function () {
+      $(this).slideUp(200);
+      $(this).closest('li').find('.item-content__hidden-list').slideDown(400);
+    })
+
+  }
+}
+
+
+// tab hover in your stay in Dubai page
+
+$(window).on('load', function () {
+  if ($('.stay-info__tab-block').length && $(window).width() > 1250) {
+    $('.stay-info__tab-block').each(function () {
+      var maxHeigthBox = Math.max.apply(Math, $(this).find('.item-right__box').map(function(){ return $(this).outerHeight(); }).get());
+      $(this).find('.item').height(maxHeigthBox);
+    })
+  }
+})
 
 
 
