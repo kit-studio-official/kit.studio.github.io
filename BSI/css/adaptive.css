@@ -479,6 +479,17 @@
   .contact-us__form {
     margin-top: 40px;
   }
+
+
+  /* medical information page */
+
+  .medical-info-section .container {
+    width: 688px;
+  }
+
+  .medical-info-section br {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -567,7 +578,7 @@
     padding: 40px 0;
   }
 
-  .how-works__header-box p {
+  .how-works__header-box .how-works__header-description {
     margin-bottom: 12px;
   }
 
@@ -1423,7 +1434,7 @@
     padding-bottom: 12px;
   }
 
-  .wellbeing-page .how-works__header-box p {
+  .wellbeing-page .how-works__header-box .how-works__header-description {
     margin-top: 12px;
   }
 
@@ -1559,5 +1570,79 @@
     line-height: 32px;
     letter-spacing: -0.1px;
     text-align: left;
+  }
+
+
+  /* medical information page */
+
+  .medical-info-section {
+    padding: 40px 0;
+  }
+
+  .medical-info-section .container {
+    width: 100%;
+  }
+
+  .medical-info-section .how-works__header {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #161C2D;
+    letter-spacing: 0;
+  }
+
+  .medical-info-section .how-works__header-box .how-works__header-description {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .g42-section__editor strong,
+  .g42-section__editor p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .g42-section .form-section__info {
+    padding: 0;
+  }
+
+  .g42-section .form-section__info-img {
+    margin-top: 3px;
+  }
+
+
+  /* medical info section */
+
+  .medical-info__editor strong {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .medical-info__editor > ol {
+    margin-top: 26px;
+  }
+
+  .medical-info__editor > ol > li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .medical-info__box-editor {
+    padding: 16px 21px;
+  }
+
+  .medical-info__box-editor strong {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .medical-info__box-editor > ol {
+    margin-top: 8px;
+  }
+
+  .medical-info__description {
+    margin-top: 24px;
   }
 }
