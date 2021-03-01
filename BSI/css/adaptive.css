@@ -1321,8 +1321,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: auto;
-    min-height: 220px;
+    height: 220px;
   }
 
   .sightseeing-box__img:before,
