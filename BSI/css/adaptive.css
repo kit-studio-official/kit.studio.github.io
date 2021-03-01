@@ -109,6 +109,10 @@
     flex-direction: column;
   }
 
+  .item br {
+    display: none;
+  }
+
   .item__one-block,
   .item__scroll-block {
     max-width: none;
@@ -250,11 +254,6 @@
 
   .travel-packages .travels-section {
     padding-bottom: 80px;
-  }
-
-  .travel-packages .travels__btns {
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
   }
 
   .item-content__hidden-list {
@@ -1259,6 +1258,11 @@
     border-top: none;
   }
 
+  .travel-packages .travels__btns {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+
   .travel-packages .travels-section {
     padding-bottom: 40px;
   }
@@ -1357,6 +1361,7 @@
     line-height: 24px;
     letter-spacing: 0.1px;
   }
+
 
   /* your stay in Dubai page */
 

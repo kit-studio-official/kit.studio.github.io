@@ -333,7 +333,7 @@ svg circle {
 
 .header__menu-btn svg,
 .header__menu-btn img {
-  height: 100%;
+  max-height: 100%;
   width: auto;
 }
 
