@@ -6,7 +6,7 @@ body {
   -webkit-text-size-adjust: 100%;
   /* Сглаживание шрифтов */
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 5000px;
+  background-color: #F4F4F4;
 }
 
 body.no-scroll {
@@ -818,7 +818,7 @@ svg path {
   justify-content: center;
   position: absolute;
   bottom: -20px;
-  right: 468px;
+  right: 467px;
   z-index: 3;
 }
 
@@ -980,10 +980,10 @@ svg path {
 
   width: 100%;
   max-width: 561px;
-  height: 300px;
 
   border-radius: 48px;
   overflow: hidden;
+  cursor: pointer;
 
   background: url(../img/video-poster.png) center no-repeat;
   -webkit-background-size: cover;
@@ -1108,11 +1108,162 @@ svg path {
 }
 
 .video-box__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 136px;
   height: 136px;
   position: absolute;
   overflow: hidden;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 1;
 }
+
+.video-box__play:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.video-box__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 43px;
+  margin-right: -4px;
+  z-index: 1;
+}
+
+.video-box__icon svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.for-blur {
+  position: static;
+}
+
+
+/* blockchain section */
+
+.blockchain-section__content {
+  padding: 68px 100px;
+  width: 100%;
+
+  background-color: #fff;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+  border-radius: 48px;
+}
+
+.blockchain-section__header-box {
+  margin-bottom: 40px;
+}
+
+.blockchain-section__header {
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #1D2027;
+}
+
+.blockchain-section__header-description {
+  margin-top: 40px;
+
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #5B5B5B;
+}
+
+.blockchain-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.blockchain-box:last-child {
+  margin-bottom: 0;
+}
+
+.blockchain-box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.blockchain-box__text {
+  width: 100%;
+  max-width: 360px;
+}
+
+.blockchain-box__text h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+  color: #1D2027;
+}
+
+.blockchain-box__text p {
+  margin-top: 18px;
+
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  color: #5B5B5B;
+}
+
+.blockchain-box__btn {
+  margin-top: 40px;
+}
+
+
+.blockchain-box__animation {
+  width: 100%;
+  max-width: 550px;
+}
+
+.blockchain-box__animation svg {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .mob {
@@ -1185,31 +1336,11 @@ svg path {
   .slider .slick-dots li:hover {
     background-color: #E93F1E;
   }
-}
 
 
+  /* video section */
 
-
-
-.box {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.box:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.01);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  .video-box:hover .video-box__play:before {
+    background: rgba(233, 63, 30, 1);
+  }
 }

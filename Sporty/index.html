@@ -141,31 +141,6 @@
 			  </div>
 		  </div>
 	  </header>
-	
-	
-	  <div class="box">
-		  asdasd a
-		  sd
-		  a
-		  sd a
-		  sd
-		   a
-		  d a
-		  sd a
-		  sd
-		
-		  <br>
-		  <br>
-		  <br>
-		  
-		  a
-		  sd
-		  asd
-		  as
-		  d
-	  </div>
-	  
-	  
 	  
 	  <main>
 		  <section class="main-section">
@@ -188,9 +163,9 @@
 						  </p>
 						
 						  <div class="btn-box main-section__btn">
-							  <div class="btn">
+							  <a href="#slider-section" class="btn link-scroll">
 								  Интересно
-							  </div>
+							  </a>
 						  </div>
 					  </div>
 					
@@ -263,7 +238,7 @@
 			  </div>
 		  </section>
 		
-		  <section class="slider-section">
+		  <section id="slider-section" class="slider-section for-blur">
 			  <div class="container">
 				  <div class="slider-section__content">
 					  <div class="slider">
@@ -359,7 +334,16 @@
 					  </div>
 					  
 					  <div class="video-box">
-<!--						  <img src="img/video-poster.png" alt="">-->
+						  <img src="img/video-poster.png" alt="">
+						
+						  <div class="video-box__play">
+							  <div class="video-box__icon">
+								  <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+									  <path d="M0.0773926 5.68825C0.0773926 1.83304 4.25616 -0.571798 7.58948 1.36513L29.6376 14.1769C32.9548 16.1044 32.9548 20.8955 29.6376 22.8231L7.58949 35.6349C4.25617 37.5718 0.0773926 35.167 0.0773926 31.3117V5.68825Z"
+									        fill="white"/>
+								  </svg>
+							  </div>
+						  </div>
 						  
 						  <div class="video-box__name-box">
 							  <div class="video-box__name-img-box">
@@ -386,11 +370,87 @@
 				  </div>
 			  </div>
 		  </section>
+		  
+		  <section class="blockchain-section">
+			  <div class="container">
+				  <div class="blockchain-section__content">
+					  <div class="blockchain-section__header-box">
+						  <h2 class="blockchain-section__header">
+							  Как работает гарантия
+							  <br>в blockchain
+						  </h2>
+						  <p class="blockchain-section__header-description">
+							  При взятии автографа сам спортсмен подтверждает его подлинность
+							  <br>в блокчейн-сети и в дальнейшем все перемещения фиксируются в независимых
+							  <br>точках (нодах).
+						  </p>
+					  </div>
+					  
+					  <div class="blockchain-block">
+						  <div class="blockchain-box">
+							  <div class="blockchain-box__text-box">
+								  <div class="blockchain-box__text">
+									  <h3>
+										  Покупатель изъявляет
+										  <br>желание купить предмет
+									  </h3>
+									  <p>
+										  Подписанный игроком
+										  <br>и стать его правообладателем.
+										  <br>На платформе обмена артефактами
+										  <br>«Sporty».
+									  </p>
+								  </div>
+							  </div>
+							  
+							  <div id="animation1" class="blockchain-box__animation"></div>
+						  </div>
+						  <div class="blockchain-box">
+							  <div class="blockchain-box__text-box">
+								  <div class="blockchain-box__text">
+									  <h3>
+										  Информация о товаре передается на
+										  <br>подтверждение
+										  <br>в цифровой нотариат
+									  </h3>
+									  <p>
+										  Цифровой нотариат, в лице, автора подписи и его клуба (доверенные узлы) + блокчейн сеть подтверждают достоверность подписи
+									  </p>
+								  </div>
+							  </div>
+							
+							  <div id="animation2" class="blockchain-box__animation"></div>
+						  </div>
+						  <div class="blockchain-box">
+							  <div class="blockchain-box__text-box">
+								  <div class="blockchain-box__text">
+									  <h3>
+										  Информация о новом правообладателе
+										  достоверной подписи заносится
+										  <br>в базу блокчейна
+									  </h3>
+									  <p>
+										  Покупатель, ставший владельцем
+										  может перепродать товар в системе
+									  </p>
+								  </div>
+								  
+								  <div class="btn-box blockchain-box__btn">
+									  <a href="#catalog" class="btn link-scroll">КАТАЛОГ ТОВАРОВ</a>
+								  </div>
+							  </div>
+							
+							  <div id="animation3" class="blockchain-box__animation"></div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </section>
 	  </main>
-	  
   </div>
 
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/lottie.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.inputmask.js"></script>
   <script src="js/script.js"></script>

@@ -92,6 +92,20 @@ $('.header__hamburger').on('click', function () {
 });
 
 
+// anchor
+
+$('.link-scroll').on("click", function (event) {
+  event.preventDefault();
+
+  var id = $(this).attr('href');
+  var top = $(id).offset().top + 5;
+
+  $('body,html').animate({
+    scrollTop: top
+  }, 1000);
+});
+
+
 // slider - slider section
 
 $('.slider').slick({
@@ -141,6 +155,35 @@ $(document).ready(function () {
 })
 
 
+// JSON animation
+
+let animationElement1 = document.getElementById('animation1');
+let animationElement2 = document.getElementById('animation2');
+let animationElement3 = document.getElementById('animation3');
+
+lottie.loadAnimation({
+  container: animationElement1, // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'Block_1.json' // the path to the animation json
+});
+
+lottie.loadAnimation({
+  container: animationElement2, // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'Block_2.json' // the path to the animation json
+});
+
+lottie.loadAnimation({
+  container: animationElement3, // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'Block_3.json' // the path to the animation json
+});
 
 
 
