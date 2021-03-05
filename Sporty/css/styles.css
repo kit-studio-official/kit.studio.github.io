@@ -139,6 +139,7 @@ svg path {
 
   font-size: 16px;
   text-transform: unset;
+  letter-spacing: 0;
 
   color: #1D2027;
 }
@@ -153,6 +154,7 @@ svg path {
 }
 
 .btn.big.active {
+  pointer-events: none;
   background-color: #E93F1E;
   color: #ffffff;
 }
@@ -161,6 +163,8 @@ svg path {
   position: relative;
   display: flex;
   justify-content: flex-start;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
 }
 
 .dropdown .btn p {
@@ -244,17 +248,19 @@ svg path {
 }
 
 .dropdown-list li {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  position: relative;
+  display: block;
 
-  padding: 12px;
+  width: 100%;
   margin-right: 4px;
+  /*padding: 12px;*/
+  height: 48px;
 
   cursor: pointer;
   border-radius: 6px;
   white-space: nowrap;
   user-select: none;
+  text-decoration: none;
 
   font-weight: 600;
   font-size: 16px;
@@ -1245,15 +1251,56 @@ svg path {
 }
 
 
+/* catalog section */
 
+.catalog-section {
+  padding-top: 108px;
+}
 
+.catalog-section__header {
+  margin-bottom: 72px;
 
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
 
+.catalog__sort-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.sort-country {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+.sort-country__btn {
+  margin-right: 16px;
+}
 
+.sort-country__btn:last-child {
+  margin-right: 0;
+}
 
+.product-sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
+.product-sort .dropdown {
+  margin-right: 14px;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 

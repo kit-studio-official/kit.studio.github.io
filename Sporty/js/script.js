@@ -186,6 +186,16 @@ lottie.loadAnimation({
 });
 
 
+// country sort
+
+$('.sort-country__btn').on('click', function () {
+  $(this).closest('.sort-country').find('.sort-country__btn').removeClass('active');
+  $(this).addClass('active');
+})
+
+
+
+
 
 
 
