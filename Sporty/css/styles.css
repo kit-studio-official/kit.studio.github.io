@@ -493,6 +493,7 @@ svg path {
   white-space: nowrap;
   user-select: none;
 
+  font-family: 'Stapel', sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -504,6 +505,7 @@ svg path {
   white-space: inherit;
   user-select: inherit;
 
+  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   text-align: inherit;
@@ -578,7 +580,7 @@ svg path {
 }
 
 .main__header {
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 56px;
   line-height: 60px;
   letter-spacing: 0.03em;
@@ -904,7 +906,7 @@ svg path {
   align-self: flex-end;
   width: 415px;
 
-  font-weight: 600;
+  font-family: 'Stapel', sans-serif;
   font-size: 42px;
   line-height: 42px;
   letter-spacing: 0.03em;
@@ -1014,7 +1016,7 @@ svg path {
 }
 
 .video-section__header {
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 56px;
   line-height: 62px;
   letter-spacing: 0.03em;
@@ -1237,7 +1239,7 @@ svg path {
 }
 
 .blockchain-section__header {
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 52px;
   line-height: 58px;
   text-align: center;
@@ -1276,7 +1278,7 @@ svg path {
 }
 
 .blockchain-box__text h3 {
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 24px;
   line-height: 34px;
   color: #1D2027;
@@ -1316,7 +1318,7 @@ svg path {
 .catalog-section__header {
   margin-bottom: 72px;
 
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 52px;
   line-height: 58px;
   text-align: center;
@@ -1397,7 +1399,7 @@ svg path {
 }
 
 .product-sale__header {
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 52px;
   line-height: 58px;
   text-align: center;
@@ -1451,7 +1453,7 @@ svg path {
 .catalog__more-btn-text {
   padding-left: 13px;
 
-  font-weight: 600;
+  font-family: 'Stapel', sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: #E93F1E;
@@ -1517,7 +1519,7 @@ svg path {
   display: block;
   margin-bottom: 19px;
 
-  font-weight: 600;
+  font-family: 'Stapel', sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #1D2027;
@@ -1786,7 +1788,7 @@ svg path {
 }
 
 .modal__header .item {
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 24px;
   line-height: 32px;
   color: #1D2027;
@@ -1813,6 +1815,7 @@ svg path {
 
 .product-modal .modal__video {
   padding: 91px 42px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .product-modal .modal__video img {
@@ -1851,7 +1854,7 @@ svg path {
 
   border-bottom: 1px solid #D5DEDC;
 
-  font-weight: bold;
+  font-family: 'Stapel', sans-serif;
   font-size: 24px;
   line-height: 32px;
   color: #E93F1E;

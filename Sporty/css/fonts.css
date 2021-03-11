@@ -27,3 +27,9 @@
   src: url("../fonts/Gilroy-Bold.woff");
   font-weight: bold;
 }
+
+@font-face {
+  font-family: "Stapel";
+  src: url("../fonts/Stapel_Medium.woff");
+  font-weight: normal;
+}

@@ -77,7 +77,7 @@ if ($(window).width() <= 750) {
   $(window).scroll(function () {
     var scroll = $(this).scrollTop();
 
-    if ($('.mob-menu-block').hasClass('active') || $('.modal-wrapper').hasClass('active')) {
+    if ($('.mob-menu-block').hasClass('active') || $('.modal-wrapper').hasClass('active') || $('.filter').hasClass('active')) {
       return;
     }
 
@@ -302,7 +302,7 @@ $('.open-product-modal').on('click', function () {
   $('.product-modal').addClass('active');
 });
 
-if ($(window).width() <= 750) {
+if ($(window).width() <= 1199) {
   $('.mob-open-product-modal').on('click', function () {
     blockBody();
     bodyScroll();
@@ -422,6 +422,56 @@ function animation(scrollTop) {
   });
 
 }
+
+
+// mobile filter
+
+let getFilterHeader = $('.filter-header__header')
+let filterName = getFilterHeader.attr('data-filter-name').trim();
+
+getFilterHeader.text(filterName);
+
+$('.filte-btn').on('click', function () {
+  blockBody();
+  $('.filter').addClass('active');
+});
+
+$('.filter-close').on('click', function () {
+  blockBody();
+  $(this).closest('.filter').removeClass('active');
+});
+
+$('.filter-tab').on('click', function () {
+  $('.filter-reset-btn').addClass('hide-btn');
+  $(this).closest('.filter-tab-box').find('.filter-list-block').addClass('active');
+  $('.filter-header__close-btn').addClass('hide-btn');
+  $('.filter-header__back-arrow').removeClass('hide-btn');
+});
+
+$('.to-back').on('click', function () {
+  $('.filter-list-block.active').removeClass('active');
+  $('.filter-header__close-btn').removeClass('hide-btn');
+  $('.filter-header__back-arrow').addClass('hide-btn');
+
+  if ($('.filter-reset-btn').hasClass('active-btn')) {
+    $('.filter-reset-btn').removeClass('hide-btn');
+  }
+});
+
+$('.filter-list-block input[type="checkbox"]').change(function () {
+  var isActiveCheckboxes = $('.checkbox-block input[type="checkbox"]:checked').length ? true : false;
+
+  if (isActiveCheckboxes) {
+    $('.filter-reset-btn').addClass('active-btn');
+  } else {
+    $('.filter-reset-btn').removeClass('active-btn');
+  }
+});
+
+$('.filter-reset-btn').on('click', function () {
+  $('.filter-reset-btn').addClass('hide-btn');
+});
+
 
 
 
