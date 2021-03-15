@@ -137,93 +137,93 @@ $(window).scroll(function () {
 
 // slider
 
-const swiper = new Swiper('.news-slider', {
-  loop: true,
-  speed: 500,
-
-  navigation: {
-    nextEl: '.news-next',
-    prevEl: '.news-prev',
-  },
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 20
-    },
-    751: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 20
-    },
-    1251: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 45,
-    },
-  }
-});
-
-
-const awardsSwiper = new Swiper('.awards-slider', {
-  loop: true,
-  speed: 500,
-
-  breakpoints: {
-    0: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 20,
-      navigation: false,
-    },
-    751: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 10,
-      navigation: false,
-    },
-    1251: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 55,
-      navigation: {
-        nextEl: '.awards-next',
-        prevEl: '.awards-prev',
-      },
-    }
-  }
-});
+// const swiper = new Swiper('.news-slider', {
+//   loop: true,
+//   speed: 500,
+//
+//   navigation: {
+//     nextEl: '.news-next',
+//     prevEl: '.news-prev',
+//   },
+//
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//       slidesPerGroup: 1,
+//       spaceBetween: 20
+//     },
+//     751: {
+//       slidesPerView: 2,
+//       slidesPerGroup: 2,
+//       spaceBetween: 20
+//     },
+//     1251: {
+//       slidesPerView: 3,
+//       slidesPerGroup: 3,
+//       spaceBetween: 45,
+//     },
+//   }
+// });
 
 
-const objectsSwiper = new Swiper('.object-slider', {
-  speed: 500,
-  navigation: {
-    nextEl: '.object-next',
-    prevEl: '.object-prev',
-  },
-  pagination: {
-    el: '.object-slider__pag',
-  },
+// const awardsSwiper = new Swiper('.awards-slider', {
+//   loop: true,
+//   speed: 500,
+//
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 2,
+//       slidesPerGroup: 2,
+//       spaceBetween: 20,
+//       navigation: false,
+//     },
+//     751: {
+//       slidesPerView: 4,
+//       slidesPerGroup: 4,
+//       spaceBetween: 10,
+//       navigation: false,
+//     },
+//     1251: {
+//       slidesPerView: 4,
+//       slidesPerGroup: 4,
+//       spaceBetween: 55,
+//       navigation: {
+//         nextEl: '.awards-next',
+//         prevEl: '.awards-prev',
+//       },
+//     }
+//   }
+// });
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 15,
-    },
-    751: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 15,
-    },
-    1251: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 55,
-    }
-  }
-});
+
+// const objectsSwiper = new Swiper('.object-slider', {
+//   speed: 500,
+//   navigation: {
+//     nextEl: '.object-next',
+//     prevEl: '.object-prev',
+//   },
+//   pagination: {
+//     el: '.object-slider__pag',
+//   },
+//
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//       slidesPerGroup: 1,
+//       spaceBetween: 15,
+//     },
+//     751: {
+//       slidesPerView: 2,
+//       slidesPerGroup: 2,
+//       spaceBetween: 15,
+//     },
+//     1251: {
+//       slidesPerView: 4,
+//       slidesPerGroup: 4,
+//       spaceBetween: 55,
+//     }
+//   }
+// });
 
 
 // mob menu
@@ -282,6 +282,85 @@ $('.info-btn').on('click', function () {
 
   }
 });
+
+
+// map
+//
+// function createMapSinglePoint(mapName, mapId) {
+//   var map_block_id = '#' + mapId;
+//   $(map_block_id).html('');
+//   var mapLength = mapName['icon']['iconCoords'][0];
+//   var mapWidth = mapName['icon']['iconCoords'][1];
+//   var coordMap = mapLength + ',' + mapWidth;
+//
+//
+//   var myMap = new ymaps.Map(mapId, {
+//     center: mapName['icon']['iconCoords'],
+//     zoom: 14
+//   }, {});
+//
+//   if (mapName) {
+//     for (key in mapName) {
+//       point = new ymaps.Placemark(mapName[key]['iconCoords'], {}, {
+//         iconLayout: 'default#image',
+//         iconImageHref: iconURL,
+//         iconImageSize: iconSize,
+//         iconImageOffset: iconOffset,
+//       });
+//       myMap.geoObjects
+//         .add(point);
+//     }
+//   }
+//
+// }
+//
+//
+// function buildMap_multipleIcon(mapName, mapId, mapCenter) {
+//   if ($('.objects__map-block').length) {
+//     var map_block_id = '#' + mapId;
+//     $(map_block_id).html('');
+//     var customCenter = mapCenter;
+//     var mapLength = customCenter[0];
+//     var mapWidth = customCenter[1];
+//     var coordMap = mapLength + ',' + mapWidth;
+//
+//
+//     var myMap = new ymaps.Map(mapId, {
+//       center: customCenter,
+//       zoom: 7
+//     }, {});
+//
+//     if (mapName) {
+//       for (key in mapName) {
+//         point = new ymaps.Placemark(mapName[key]['iconCoords'], {
+//           hintContent: iconHoverText,
+//           balloonContent: mapName[key]['tooltipeContent'],
+//         },{
+//           iconLayout: 'default#image',
+//           iconImageHref: iconURL,
+//           iconImageSize: iconSize,
+//           iconImageOffset: iconOffset,
+//         });
+//         myMap.geoObjects
+//           .add(point);
+//       }
+//     }
+//   }
+// }
+//
+// $(document).ready(function() {
+//   // if ($('#map_col_1').length) {
+//   //   ymaps.ready(function() {
+//   //     createMapSinglePoint(map_1, 'map_col_1');
+//   //     createMapSinglePoint(map_2, 'map_col_2');
+//   //   });
+//   // }
+//   if ($('.objects__map-block').length) {
+//     ymaps.ready(function() {
+//       buildMap_multipleIcon(map_1, 'objects__map-block', mapCenter);
+//     });
+//   }
+// });
 
 
 
