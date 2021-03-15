@@ -571,10 +571,15 @@ svg path {
   margin-top: 60px;
 }
 
-.btn.-pink {
+.btn.-pink,
+.inside .header__login {
   border-width: 1px;
   color: #E25D7B;
   border-color: #E25D7B;
+}
+
+.inside .header__login {
+  border-width: 2px;
 }
 
 .btn.-fix {
@@ -1136,12 +1141,225 @@ svg path {
 }
 
 
+/* info page */
 
+body.inside {
+  background-color: #EFF3F5;
+}
 
+.inside .logo-text {
+  fill: #464C6C;
+}
 
+.inside .logo-line {
+  fill: #E25D7B;
+}
 
+.inside .header__nav a,
+.inside .header__nav p {
+  color: #464C6C;
+}
 
+.inside .header__nav > ul > li > p:after {
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.41933 2.20706L4.338 6.28839L0.25708 2.20702L1.67137 0.792886L4.33808 3.45989L7.00512 0.792847L8.41933 2.20706Z' fill='%23464C6C'/%3E%3C/svg%3E%0A");
+}
 
+.inside .header__tel {
+  color: #464C6C;
+}
+
+.info-section {
+  padding-top: 170px;
+  padding-bottom: 110px;
+}
+
+.info-section__header {
+  margin-bottom: 45px;
+}
+
+.info-section__header a {
+  display: inline-block;
+  margin-bottom: 11px;
+
+  font-family: 'TT Hoves', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 134.3%;
+  color: #A9A9A9;
+}
+
+.info-section__header h1,
+.info-section__header h2,
+.info-section__header h3,
+.info-section__header h4,
+.info-section__header h5,
+.info-section__header h6 {
+  font-family: 'TT Hoves', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 43.0133px;
+  line-height: 106.3%;
+  color: #464C6C;
+}
+
+.info-block {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+
+  padding: 30px 45px 30px 30px;
+}
+
+.info-btn {
+  position: relative;
+  padding: 28px 30px 23px 28px;
+  cursor: pointer;
+}
+
+.info-btn {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.info:first-child .info-btn {
+  border-top: none;
+}
+
+.info-btn:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 21px;
+  height: 13px;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='21' height='13' viewBox='0 0 21 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.5501 2.46251L10.7672 12.2454L0.984253 2.4625L3.10558 0.341189L10.7672 8.0028L18.4288 0.341187L20.5501 2.46251Z' fill='%23E25D7B'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+
+  -webkit-transform: translateY(-50%) rotate(0);
+  transform: translateY(-50%) rotate(0);
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.info.active .info-btn:after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.info-btn p {
+  font-family: 'TT Norms', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 130.69%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #9297B1;
+
+  user-select: none;
+}
+
+.info-btn h1,
+.info-btn h2,
+.info-btn h3,
+.info-btn h4,
+.info-btn h5,
+.info-btn h6 {
+  font-family: 'TT Hoves', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130.69%;
+  color: #464C6C;
+
+  user-select: none;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.info.active h1,
+.info.active h2,
+.info.active h3,
+.info.active h4,
+.info.active h5,
+.info.active h6 {
+  color: #E25D7B;
+}
+
+.info-list-block {
+  display: none;
+}
+
+.info-list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px 28px 28px 28px;
+}
+
+.info-list ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-height: 325px;
+}
+
+.info-list li {
+  margin-bottom: 18px;
+  max-width: 160px;
+  margin-right: 115px;
+}
+
+.info-list a {
+  position: relative;
+  display: block;
+  padding-left: 35px;
+}
+
+.info-list a:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 19px;
+  height: 21px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='21' viewBox='0 0 19 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.10321 0.162598C3.39332 0.162598 2.8125 0.743417 2.8125 1.45331V19.5232C2.8125 20.2331 3.39332 20.8139 4.10321 20.8139H17.0103C17.7202 20.8139 18.301 20.2331 18.301 19.5232V5.32543L13.1382 0.162598H4.10321Z' fill='%23E2E5E7'/%3E%3Cpath d='M14.4289 5.32543H18.301L13.1382 0.162598V4.03473C13.1382 4.74462 13.719 5.32543 14.4289 5.32543Z' fill='%23B0B7BD'/%3E%3Cpath d='M18.301 9.19757L14.4289 5.32544H18.301V9.19757Z' fill='%23CAD1D8'/%3E%3Cpath d='M15.7196 16.9418C15.7196 17.2967 15.4292 17.5872 15.0742 17.5872H0.876434C0.521489 17.5872 0.231079 17.2967 0.231079 16.9418V10.4883C0.231079 10.1333 0.521489 9.8429 0.876434 9.8429H15.0742C15.4292 9.8429 15.7196 10.1333 15.7196 10.4883V16.9418Z' fill='%23E25D7B'/%3E%3Cpath d='M3.04419 12.39C3.04419 12.2197 3.17842 12.0338 3.39462 12.0338H4.58659C5.25776 12.0338 5.86181 12.483 5.86181 13.3439C5.86181 14.1596 5.25776 14.6139 4.58659 14.6139H3.72504V15.2954C3.72504 15.5226 3.58048 15.651 3.39462 15.651C3.22424 15.651 3.04419 15.5226 3.04419 15.2954V12.39ZM3.72504 12.6837V13.9692H4.58659C4.9325 13.9692 5.20613 13.664 5.20613 13.3439C5.20613 12.9831 4.9325 12.6837 4.58659 12.6837H3.72504Z' fill='white'/%3E%3Cpath d='M6.87357 15.6511C6.7032 15.6511 6.51733 15.5581 6.51733 15.3316V12.4004C6.51733 12.2152 6.7032 12.0803 6.87357 12.0803H8.05521C10.4133 12.0803 10.3617 15.6511 8.10168 15.6511H6.87357ZM7.19883 12.7102V15.0218H8.05521C9.44853 15.0218 9.51048 12.7102 8.05521 12.7102H7.19883Z' fill='white'/%3E%3Cpath d='M11.1977 12.7515V13.5718H12.5136C12.6994 13.5718 12.8853 13.7576 12.8853 13.9377C12.8853 14.1081 12.6994 14.2475 12.5136 14.2475H11.1977V15.331C11.1977 15.5117 11.0693 15.6505 10.8886 15.6505C10.6614 15.6505 10.5226 15.5117 10.5226 15.331V12.3998C10.5226 12.2146 10.662 12.0797 10.8886 12.0797H12.7001C12.9272 12.0797 13.0615 12.2146 13.0615 12.3998C13.0615 12.565 12.9272 12.7509 12.7001 12.7509H11.1977V12.7515Z' fill='white'/%3E%3Cpath d='M15.0742 17.5871H2.8125V18.2325H15.0742C15.4292 18.2325 15.7196 17.9421 15.7196 17.5871V16.9418C15.7196 17.2967 15.4292 17.5871 15.0742 17.5871Z' fill='%23CAD1D8'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.info-list a strong {
+  display: block;
+
+  font-family: 'TT Hoves', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130.69%;
+  color: #464C6C;
+}
+
+.info-list a em {
+  display: block;
+  margin-top: 2px;
+
+  font-family: 'TT Hoves', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 134.3%;
+  color: #585858;
+}
 
 
 
@@ -1193,7 +1411,8 @@ svg path {
   
   /* about section */
 
-  .btn.-pink:hover {
+  .btn.-pink:hover,
+  .inside .header__login:hover {
     background-color: #E25D7B;
     color: #fff;
   }
@@ -1255,6 +1474,23 @@ svg path {
   .footer__btn .btn:hover path {
     fill: #E25D7B;
   }
+
+
+  /* info page */
+
+  .info-section__header a:hover {
+    color: #E25D7B;
+  }
+
+  .info-btn:hover h1,
+  .info-btn:hover h2,
+  .info-btn:hover h3,
+  .info-btn:hover h4,
+  .info-btn:hover h5,
+  .info-btn:hover h6 {
+    color: #E25D7B;
+  }
+
 }
 
 .animation {

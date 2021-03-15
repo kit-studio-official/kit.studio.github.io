@@ -257,6 +257,36 @@ $('.header__nav > ul > li > p').on('click', function () {
 });
 
 
+// info page - accordion
+
+let accordionAnimation = false;
+
+$('.info-btn').on('click', function () {
+  if (!accordionAnimation) {
+    accordionAnimation = true;
+
+    setTimeout(function () {
+      accordionAnimation = false;
+    }, 500);
+
+    if ($(this).closest('.info').hasClass('active')) {
+      $(this).closest('.info').removeClass('active');
+      $(this).closest('.info').find('.info-list-block').slideUp(500);
+    } else {
+      $(this).closest('.info-block').find('.info').removeClass('active');
+      $(this).closest('.info-block').find('.info-list-block').slideUp(500);
+      $(this).closest('.info').addClass('active');
+      $(this).closest('.info').find('.info-list-block').slideDown(500);
+    }
+
+
+  }
+});
+
+
+
+
+
 
 
 $(window).scroll(function () {

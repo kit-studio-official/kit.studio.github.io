@@ -86,12 +86,12 @@
 	}
 
 	.header__nav > ul > li {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		margin-right: 0;
 	}
 
 	.header__nav a, .header__nav p {
-		font-size: 22px;
+		font-size: 18px;
 		color: #464C6C;
 	}
 
@@ -108,8 +108,8 @@
 		pointer-events: auto;
 
 		padding: 0;
-		padding-top: 20px;
-		padding-left: 20px;
+		padding-top: 15px;
+		padding-left: 15px;
 
 		opacity: 1;
 		-webkit-transform: translate3d(0, 0, 0);
@@ -150,6 +150,14 @@
 		background-color: #26426B;
 	}
 
+	.fill .logo-text {
+		fill: #fff;
+	}
+
+	.fill .logo-line {
+		fill: #fff;
+	}
+
 	.hamburger {
 		display: flex;
 		flex-direction: column;
@@ -166,6 +174,14 @@
 
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
+	}
+
+	.inside .hamburger div {
+		background-color: #464C6C;
+	}
+
+	.fill .hamburger div {
+		background-color: #fff;
 	}
 
 	.hamburger.active div:nth-child(1) {
@@ -340,6 +356,34 @@
 	.footer__btn {
 		margin-top: 80px;
 	}
+
+
+	/* info page */
+
+	.info-section {
+		padding-top: 150px;
+		padding-bottom: 80px;
+	}
+
+	.info-block {
+		padding: 20px 20px 20px 15px;
+	}
+
+	.info-btn {
+		padding: 20px 30px 18px 10px;
+	}
+
+	.info-list {
+		padding: 10px 15px 10px 15px;
+	}
+
+	.info-list ul {
+		max-height: 650px;
+	}
+
+
+
+
 
 
 
@@ -637,5 +681,62 @@
 		padding-bottom: 60px;
 		padding-left: 30px;
 		padding-right: 30px;
+	}
+
+
+	/* info page	*/
+
+	.info-section {
+		padding-top: 110px;
+		padding-bottom: 40px;
+	}
+
+	.info-section__header {
+		margin-bottom: 30px;
+	}
+
+	.info-section__header h1,
+	.info-section__header h2,
+	.info-section__header h3,
+	.info-section__header h4,
+	.info-section__header h5,
+	.info-section__header h6 {
+		font-size: 24px;
+	}
+
+	.info-block {
+		padding: 10px;
+	}
+
+	.info-btn {
+		padding: 15px 30px 10px 10px;
+	}
+
+	.info-btn:after {
+		width: 20px;
+		height: 10px;
+	}
+
+	.info-btn h1,
+	.info-btn h2,
+	.info-btn h3,
+	.info-btn h4,
+	.info-btn h5,
+	.info-btn h6 {
+		font-size: 30px;
+	}
+
+	.info-btn p {
+		font-size: 10px;
+	}
+
+	.info-list ul {
+		max-height: none;
+	}
+
+	.info-list li {
+		margin-bottom: 12px;
+		max-width: none;
+		margin-right: 0;
 	}
 }
