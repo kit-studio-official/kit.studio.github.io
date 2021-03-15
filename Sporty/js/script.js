@@ -442,6 +442,9 @@ $('.filter-close').on('click', function () {
 });
 
 $('.filter-tab').on('click', function () {
+  let tabValue = $(this).find('p').text().trim();
+
+  $('.filter-header__header').text(tabValue);
   $('.filter-reset-btn').addClass('hide-btn');
   $(this).closest('.filter-tab-box').find('.filter-list-block').addClass('active');
   $('.filter-header__close-btn').addClass('hide-btn');
@@ -456,6 +459,8 @@ $('.to-back').on('click', function () {
   if ($('.filter-reset-btn').hasClass('active-btn')) {
     $('.filter-reset-btn').removeClass('hide-btn');
   }
+
+  $('.filter-header__header').text(filterName);
 });
 
 $('.filter-list-block input[type="checkbox"]').change(function () {
