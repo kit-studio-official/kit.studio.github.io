@@ -1,6 +1,6 @@
 
 $('.nav-toggle').click(function() {
-  $(this).toggleClass('opened');
+  $(this).toggleClass('opened'); 
   if ($(window).innerWidth() < 1280) {
     $('.mobile_menu').toggleClass('active');
     blockBody();
@@ -34,7 +34,7 @@ function getScrollBarWidth() {
   $('body').append($divs);
 
   let width1 = $('.div1').width(),
-      width2 = $('.div2').width();
+  width2 = $('.div2').width();
 
   scrollWidth = width1 - width2;
   $divs.remove();
@@ -43,7 +43,7 @@ function getScrollBarWidth() {
 getScrollBarWidth();
 
 function bodyScroll() {
-  $('html').css('padding-right', scrollWidth + 'px');
+  $('body').css('padding-right', scrollWidth + 'px');
   $('header').css('right', scrollWidth + 'px');
 }
 
@@ -162,16 +162,6 @@ $('.modal-close').on('click', function () {
   $(this).closest('.modal-wrapper').removeClass('active');
 });
 
-$(document).on('mouseup', function (e) {
-  if ($('.modal-wrapper').hasClass('active')) {
-    var div = $(".modal");
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-      div.closest('.modal-wrapper').removeClass('active');
-      blockBody();
-    }
-  }
-});
-
 //карта
 function BuildMap() {
   if ($('.map_col').length) {
@@ -224,14 +214,15 @@ $(window).scroll(function () {
   animation(scrollTop);
 });
 
+$(document).ready(function() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', vh + 'px');
+  let vhr = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vhr', vhr + 'px')
 
-let vhr = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vhr', vhr + 'px')
-
-window.addEventListener('resize', () => {
-  vhr = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vhr', vhr + 'px');
-});
+  window.addEventListener('resize', () => {
+    vhr = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vhr', vhr + 'px');
+  });
+})
