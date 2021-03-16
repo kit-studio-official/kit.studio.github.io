@@ -26,27 +26,49 @@ $(document).on('mouseup', function (e) {
 
 // Блокировка скроллинга Body
 
+var scrollWidth;
+
+function getScrollBarWidth() {
+  let $divs = $('<div class="div1" style="width: 100vw; overflow-y: scroll;"><div class="div2" style="width: 100%;"></div></div>');
+
+  $('body').append($divs);
+
+  let width1 = $('.div1').width(),
+      width2 = $('.div2').width();
+
+  scrollWidth = width1 - width2;
+  $divs.remove();
+}
+
+getScrollBarWidth();
+
+function bodyScroll() {
+  $('html').css('padding-right', scrollWidth + 'px');
+  $('header').css('right', scrollWidth + 'px');
+}
+
 function blockBody() {
 
-  if ($('body').hasClass('no-scroll')) {
+  if ($('html').hasClass('no-scroll')) {
+    let scrollTop = $('html').attr('data-scroll');
 
-    let scrollTop = $('body').attr('data-scroll');
+    $('html').css('padding-right', 0);
+    $('header').css('right', 0);
 
-
-    $('body').removeClass('no-scroll');
-    $('body').attr('style', '');
+    $('html').removeClass('no-scroll');
+    $('html').attr('style', '');
 
     $(document).scrollTop(scrollTop);
-
   } else {
-
     let scrollTop = $(document).scrollTop();
-    $('body').addClass('no-scroll');
-    $('body').css({
+
+    bodyScroll();
+
+    $('html').addClass('no-scroll');
+    $('html').css({
       top: '-' + scrollTop + 'px'
     });
-    $('body').attr('data-scroll', scrollTop);
-
+    $('html').attr('data-scroll', scrollTop);
   }
 }
 
@@ -54,12 +76,12 @@ function blockBody() {
 $(document).scroll(function() {
   var scrollTop = $('body, html').scrollTop();
   if (scrollTop > 100) {
-    $('header').addClass('white');
+    $('header .content').addClass('white');
   } else {
-    if ($('body').hasClass('no-scroll')) {
+    if ($('html').hasClass('no-scroll')) {
 
     } else {
-      $('header').removeClass('white')
+      $('header .content').removeClass('white')
     }
   }
 })
@@ -87,7 +109,7 @@ $(document).on("click",".anchor_link", function (event) {
   if ($(window).innerWidth < 1280) {
     top = $(block_id).offset().top - 117;
   } else {
-    top = $(block_id).offset().top - 117;
+    top = $(block_id).offset().top - 97;
   }
   $('body,html').animate({scrollTop: top}, 1500);
 });
@@ -140,6 +162,16 @@ $('.modal-close').on('click', function () {
   $(this).closest('.modal-wrapper').removeClass('active');
 });
 
+$(document).on('mouseup', function (e) {
+  if ($('.modal-wrapper').hasClass('active')) {
+    var div = $(".modal");
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      div.closest('.modal-wrapper').removeClass('active');
+      blockBody();
+    }
+  }
+});
+
 //карта
 function BuildMap() {
   if ($('.map_col').length) {
@@ -190,4 +222,16 @@ function animation(scrollTop) {
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
   animation(scrollTop);
+});
+
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', vh + 'px');
+
+let vhr = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vhr', vhr + 'px')
+
+window.addEventListener('resize', () => {
+  vhr = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vhr', vhr + 'px');
 });
