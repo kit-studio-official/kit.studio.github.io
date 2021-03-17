@@ -398,6 +398,13 @@
   border: none;
   padding: 0;
   pointer-events: auto;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 .header__pc-menu-nav a {
@@ -864,12 +871,13 @@
   }
 
   .mobile_menu {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-left: 30px;
     padding-right: 30px;
   }
 
   .mobile_menu .container {
+    padding: 0;
     padding-bottom: 50px;
   }
 
