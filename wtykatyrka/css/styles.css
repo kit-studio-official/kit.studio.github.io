@@ -23,6 +23,13 @@ body {
   transition: 0.3s;
   position: relative;
   overflow-x: hidden;
+  color: #000;
+  font-family: TT Norms;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 157.52%;
+  color: #4B4B4B;
 }
 
 body.no-scroll {
@@ -655,6 +662,10 @@ header {
   margin-top: 112px;
 }
 
+.small_description h5:not(:first-child) {
+  margin-top: 25px;
+}
+
 .second_block .description p {
   margin-top: 37px;
 }
@@ -677,6 +688,30 @@ header {
   letter-spacing: 0.185em;
   text-transform: uppercase;
   color: #393939;
+}
+
+.editor ul {
+  margin-top: 20px;
+}
+
+.editor ul li:before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #F16B11;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  margin-right: 5px;
+}
+
+.editor ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 15px;
 }
 
 .small_description .editor h5 {
@@ -839,7 +874,8 @@ header {
 }
 
 .editor_block .about_block_name {
-  margin-right: 180px;
+  margin-right: 74px;
+  max-width: 238px;
 }
 
 .abs_photo {
