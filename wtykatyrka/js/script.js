@@ -1,6 +1,6 @@
 
 $('.nav-toggle').click(function() {
-  $(this).toggleClass('opened'); 
+  $(this).toggleClass('opened');
   if ($(window).innerWidth() < 1280) {
     $('.mobile_menu').toggleClass('active');
     blockBody();
@@ -43,8 +43,8 @@ function getScrollBarWidth() {
 getScrollBarWidth();
 
 function bodyScroll() {
-  $('body').css('padding-right', scrollWidth + 'px');
-  $('header').css('right', scrollWidth + 'px');
+  $('html').css('padding-right', scrollWidth + 'px');
+  $('header').css('padding-right', scrollWidth + 'px');
 }
 
 function blockBody() {
@@ -53,7 +53,7 @@ function blockBody() {
     let scrollTop = $('html').attr('data-scroll');
 
     $('html').css('padding-right', 0);
-    $('header').css('right', 0);
+    $('header').css('padding-right', 0);
 
     $('html').removeClass('no-scroll');
     $('html').attr('style', '');

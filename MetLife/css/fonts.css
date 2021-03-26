@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "PT Serif";
+  src: url("../fonts/PTSerif-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../fonts/PTSerif-Bold.woff");
+  font-weight: bold;
+}
+
+
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff");
+  font-weight: bold;
+}

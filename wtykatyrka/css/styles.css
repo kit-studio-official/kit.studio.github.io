@@ -81,11 +81,6 @@ header {
   right: 0;
   width: 100%;
   z-index: 10;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .content {
@@ -112,7 +107,7 @@ header {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 40px 0px 20px 0px;  
+  padding: 40px 0px 20px 0px;
   position: relative;
 }
 
@@ -1483,7 +1478,7 @@ input::placeholder {
   pointer-events: auto;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  
+
 }
 
 .header__pc-menu-nav a {

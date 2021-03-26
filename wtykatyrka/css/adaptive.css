@@ -211,7 +211,7 @@
 
  .editor_block .about_block_name {
    margin-right: 0;
-   margin-bottom: 30px;  
+   margin-bottom: 30px;
  }
 
  .about_block {
@@ -608,7 +608,7 @@
     width: 60%;
     position: relative;
     right: auto;
-    
+
   }
 
   .first_block > .img:before {
@@ -639,7 +639,7 @@
     left: auto;
     right: auto;
     width: 75%;
-    max-width: 75%; 
+    max-width: 75%;
   }
 
   .second_block > .img:before {
@@ -739,7 +739,7 @@
   .map_block .editor h3,
   .map_block .editor h2,
   .map_block .editor h1,
-  .map_block .editor h4, 
+  .map_block .editor h4,
   .map_block .editor h5,
   .map_block .editor h6 {
     font-size: 18px;
@@ -792,7 +792,7 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  } 
+  }
 
   /* modal */
 
@@ -918,7 +918,7 @@
     width: 100%;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column;l
+    flex-direction: column;
   }
 
   .mobile_menu .modal_buttons > * {
