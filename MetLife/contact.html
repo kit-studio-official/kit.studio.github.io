@@ -309,7 +309,7 @@
 					</div>
 					
 					<div id="map" class="map">
-						<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+						<script src="https://api-maps.yandex.ru/2.1/?apikey=myApiKey&lang=ru_RU"></script>
 						<script>
 							ymaps.ready(init);
 							
@@ -328,7 +328,7 @@
 								// Указываем координаты метки
 								myGeoObjects = new ymaps.Placemark([59.125259, 37.930267],{
 									balloonContentBody: 'Колпинское шоссе, 135, корпус 1',
-									hintContent: 'Plywood',
+									hintContent: 'MetLife',
 								},{
 									iconLayout: 'default#image',
 									// Путь до нашей картинки
