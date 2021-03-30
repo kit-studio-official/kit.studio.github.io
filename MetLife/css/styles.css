@@ -1436,3 +1436,26 @@ img {
     background-color: rgba(51,154,76,1);
   }
 }
+
+
+
+/* animation */
+
+.animation {
+  opacity: 0;
+  pointer-events: none;
+
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.animation.animated {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+

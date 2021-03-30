@@ -275,12 +275,35 @@ if ($(window).outerWidth() > 1270) {
 }
 
 
+// scroll animation
+
+function animation(scrollTop) {
+  $('.animation').not('.animated').each(function () {
+
+    let offsetTop = $(this).offset().top - 150;
+    let windowHeight = window.innerHeight;
+
+    if ((scrollTop + windowHeight) > offsetTop) {
+      $(this).addClass('animated');
+    }
+  });
+
+}
 
 
 // general
+
+$(window).scroll(function () {
+  var scrollTop = $(this).scrollTop();
+  animation(scrollTop);
+});
+
 
 $(window).on('load', function () {
   setTimeout(function () {
     $('.modal-wrapper').removeClass('hide');
   }, 400);
-})
+
+  $(window).scroll();
+});
+
